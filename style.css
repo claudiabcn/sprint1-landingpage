@@ -1,1 +1,77 @@
- 
+/* 🔄 Reset global: elimina márgenes y paddings por defecto y facilita el control de tamaños */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🎨 Estilo general del cuerpo: fondo blanco y fuente moderna */
+body {
+  background: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 🧱 Estilo del header: fondo blanco y espacio interno */
+.header {
+  background-color: white;
+  padding: 20px 40px;
+}
+
+/* 📦 Contenedor del logo y navegación: alineación horizontal con flexbox */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* separa logo y menú */
+  align-items: center; /* centra verticalmente */
+ flex-wrap: wrap;
+
+}
+/* 🖼️ Tamaño del logo */
+.logo {
+  height: 40px;
+}
+
+/* 🧭 Contenedor del menú y botón: alineación horizontal y separación entre elementos */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* 📋 Menú de navegación: lista horizontal sin viñetas */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+/* 🔗 Estilo de los enlaces del menú */
+.nav-menu li a {
+  text-decoration: none; /* sin subrayado */
+  color: #333; /* gris oscuro */
+  font-weight: 500; /* seminegrita */
+  transition: color 0.3s ease; /* transición suave al pasar el cursor */
+}
+
+/* 🔵 Efecto hover en los enlaces: se vuelven azul */
+.nav-menu li a:hover {
+  color: #5267df;
+}
+
+/* 🔴 Botón LOGIN: borde rojo, fondo transparente, texto rojo */
+.btn-red {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 2px solid #fa5959;
+  background-color: transparent;
+  color: #fa5959;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🔴 Hover en el botón LOGIN: fondo rojo, texto blanco */
+.btn-red:hover {
+  background-color: #fa5959;
+  color: white;
+}
