@@ -1,52 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookmark</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-    <body>
-    <!-- Encabezado principal con logo y navegación -->
-    <header class="header">
-      <div class="container nav-container">
-        <!-- Logo de la marca -->
-        <img src="./images/logo-bookmark.svg" alt="Bookmark Logo" class="logo" />
-        
-        <!-- Menú de navegación -->
-        <nav class="nav">
-          <ul class="nav-menu">
-            <!-- Enlaces internos a secciones de la página -->
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <!-- Botón de login -->
-          <button class="btn btn-red">Login</button>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmark</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <img src="./images/logo-bookmark.svg" alt="Bookmark Logo" class="logo" />
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn-red">Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>A clean and simple interface to organize your favourite websites.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-blue">Get it on Chrome</button>
+            <button class="btn btn-light">Get it on Firefox</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="blue-box"></div>
+          <img src="./images/illustration-hero.svg" alt="Hero image" class="hero-img" />
+        </div>
       </div>
-    </header>
-    <!-- Contenido principal de la página -->
-    <main>
-      <!-- Sección principal, normalmente con imagen y texto destacado -->
-      <section class="hero"></section>
+    </section>
 
-      <!-- Sección para mostrar características del producto -->
-      <section class="features"></section>
+    <section class="features" id="features">
+      <div class="features-header">
+        <h2>Features</h2>
+        <p>Quick and easy access to your favourite websites.</p>
+      </div>
 
-      <!-- Sección para mostrar extensiones del navegador -->
-      <section class="extension"></section>
+      <div class="features-tabs">
+        <button class="tab active" data-tab="bookmarking">Simple Bookmarking</button>
+        <button class="tab" data-tab="searching">Speedy Searching</button>
+        <button class="tab" data-tab="sharing">Easy Sharing</button>
+      </div>
 
-      <!-- Logo de Chrome, posiblemente relacionado con la extensión -->
-      <img src="./images/logo-chrome.svg" alt="Chrome Logo" class="logo-chrome" />
+      <div class="features-content">
+        <div class="tab-panel active" id="bookmarking">
+          <div class="feature-box">
+            <div class="blue-box"></div>
+            <img src="./images/illustration-features-tab-1.svg" alt="Bookmarking" />
+          </div>
+          <div class="text">
+            <h3>Bookmark in one click</h3>
+            <p>Organize your bookmarks however you like.</p>
+          </div>
+        </div>
 
-      <!-- Sección de preguntas frecuentes -->
-      <section class="faq"></section>
-    </main>
+        <div class="tab-panel" id="searching">
+          <div class="feature-box">
+            <div class="blue-box"></div>
+            <img src="./images/illustration-features-tab-2.svg" alt="Searching" />
+          </div>
+          <div class="text">
+            <h3>Intelligent search</h3>
+            <p>Find saved sites instantly without scrolling endlessly.</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="sharing">
+          <div class="feature-box">
+            <div class="blue-box"></div>
+            <img src="./images/illustration-features-tab-3.svg" alt="Sharing" />
+          </div>
+          <div class="text">
+            <h3>Share your bookmarks</h3>
+            <p>Create a shareable link and send it with one click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="extension"></section>
+    <section class="faq"></section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-    <!-- Pie de página, aún sin contenido -->
-    <footer></footer>
-
-    <!-- Contenido lateral, aún sin contenido -->
-    <aside></aside>
 </html>

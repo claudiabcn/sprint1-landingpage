@@ -1,66 +1,60 @@
-/* 🔄 Reset global: elimina márgenes y paddings por defecto y facilita el control de tamaños */
+/* 🔄 Reset global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 🎨 Estilo general del cuerpo: fondo blanco y fuente moderna */
+/* 🎨 Estilo general */
 body {
   background: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 🧱 Estilo del header: fondo blanco y espacio interno */
+/* 🧱 Header */
 .header {
   background-color: white;
   padding: 20px 40px;
 }
 
-/* 📦 Contenedor del logo y navegación: alineación horizontal con flexbox */
 .nav-container {
   display: flex;
-  justify-content: space-between; /* separa logo y menú */
-  align-items: center; /* centra verticalmente */
- flex-wrap: wrap;
-
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-/* 🖼️ Tamaño del logo */
+
 .logo {
   height: 40px;
 }
 
-/* 🧭 Contenedor del menú y botón: alineación horizontal y separación entre elementos */
 .nav {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-/* 📋 Menú de navegación: lista horizontal sin viñetas */
 .nav-menu {
   display: flex;
   list-style: none;
   gap: 30px;
 }
 
-/* 🔗 Estilo de los enlaces del menú */
 .nav-menu li a {
-  text-decoration: none; /* sin subrayado */
-  color: #333; /* gris oscuro */
-  font-weight: 500; /* seminegrita */
-  transition: color 0.3s ease; /* transición suave al pasar el cursor */
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* 🔵 Efecto hover en los enlaces: se vuelven azul */
 .nav-menu li a:hover {
   color: #5267df;
 }
 
-/* 🔴 Botón LOGIN: borde rojo, fondo transparente, texto rojo */
+/* 🔴 Botón LOGIN */
 .btn-red {
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: clamp(0.9rem, 1vw, 1.5rem);
   border: 2px solid #fa5959;
   background-color: transparent;
   color: #fa5959;
@@ -70,8 +64,195 @@ body {
   transition: all 0.3s ease;
 }
 
-/* 🔴 Hover en el botón LOGIN: fondo rojo, texto blanco */
 .btn-red:hover {
   background-color: #fa5959;
   color: white;
+}
+
+/* 🧭 Hero */
+.hero {
+  padding: 60px 40px;
+  background-color: white;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-blue,
+.btn-light {
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-blue {
+  background-color: #5267df;
+  color: white;
+}
+
+.btn-blue:hover {
+  box-shadow: 0 6px 16px rgba(82, 103, 223, 0.5);
+}
+
+.btn-light {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.btn-light:hover {
+  background-color: #5267df;
+  color: white;
+  box-shadow: 0 6px 16px rgba(82, 103, 223, 0.5);
+}
+
+/* 🖼️ Hero image */
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.hero-img {
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.blue-box {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  width: 80%;
+  max-width: 400px;
+  height: 300px;
+  background-color: #5267df;
+  border-bottom-left-radius: 150px;
+  z-index: 0;
+}
+
+/* 🧩 Features */
+.features {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.features-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.features-header p {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.features-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.tab.active {
+  border-color: #5267df;
+  color: #5267df;
+}
+
+.tab:hover {
+  color: #5267df;
+  border-color: #ccc;
+}
+
+/* 🧱 Tab panels */
+.features-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.tab-panel {
+  display: none;
+  max-width: 800px;
+}
+
+.tab-panel.active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+/* 📦 Feature box */
+.feature-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  z-index: 1;
+}
+
+.feature-box img {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feature-box .blue-box {
+  position: absolute;
+  top: 60px;
+  right: 115px;
+  width: 100%;
+  max-width: 680px;
+  height: 320px;
+  background-color: #5267df;
+  border-bottom-left-radius: 120px;
+  z-index: 0;
+}
+
+/* 📄 Texto de cada panel */
+.text {
+  position: relative;
+  z-index: 2;
+  text-align: left;
 }
