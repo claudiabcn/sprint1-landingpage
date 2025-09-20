@@ -16,3 +16,12 @@ questions.forEach((q) => {
     answer.style.display = answer.style.display === "block" ? "none" : "block";
   });
 });
+
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const icon = document.querySelector('.menu-toggle img');
+  const isOpen = menu.style.display === 'flex';
+
+  menu.style.display = isOpen ? 'none' : 'flex';
+  icon.src = isOpen ? './images/icon-hamburger.svg' : './images/icon-close.svg';
+}
