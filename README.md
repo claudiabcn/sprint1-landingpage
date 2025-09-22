@@ -9,7 +9,8 @@ Branch: feature/vanilla-implementation
 - CSS
 - Git/GitHub
   
-🛑 Desafíos Encontrados
+🛑 Desafíos Encontrados:
+
 Conocer git y github.
 Aprender HTML5 y CSS.
 Diseño responsive, version mobile, version desktop. Poder hacer las tres a la vez sin que se modifique el resto.
