@@ -7,7 +7,8 @@ Branch: feature/vanilla-implementation
 💻 Stack Tecnológico
 - HTML5
 - CSS
-- Git/GitHub 
+- Git/GitHub
+  
 🛑 Desafíos Encontrados
 Conocer git y github.
 Aprender HTML5 y CSS.
