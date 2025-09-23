@@ -135,6 +135,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .logo {
@@ -145,6 +148,9 @@ body {
   display: flex;
   align-items: center;
   gap: var(--standard-gap);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .nav-menu {
@@ -174,6 +180,9 @@ body {
   justify-content: space-between;
   gap: 50px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero-text {
@@ -484,7 +493,7 @@ body {
 .footer {
   background-color: var(--primary-blue);
   color: white;
-  padding: 60px 40px;
+  padding: 40px 0px 0px 0px;
   text-align: center;
 }
 
@@ -673,7 +682,7 @@ body {
   }
 
   .features {
-    padding: 80px 20px;
+    padding: 150px 20px;
   }
 
   .features-tabs {
@@ -703,6 +712,7 @@ body {
 
   .text {
     text-align: center;
+    padding: 80px 20px 0px;
   }
 
   .feature-box .blue-box {
@@ -712,46 +722,46 @@ body {
   }
 
   .extension {
-    padding: 80px 20px;
-  }
+    padding: 0px 20px;
 
-  .extension-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--standard-gap);
-  }
+    .extension-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--standard-gap);
+    }
 
-  .card {
-    width: 90%;
-    margin-top: 0 !important;
-  }
+    .card {
+      width: 90%;
+      margin-top: 0 !important;
+    }
 
-  .faq {
-    padding: 80px 20px;
-  }
+    .faq {
+      padding: 80px 20px;
+    }
 
-  .faq-list {
-    padding: 0 var(--small-gap);
-  }
+    .faq-list {
+      padding: 0 var(--small-gap);
+    }
 
-  .footer-nav {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: var(--small-gap);
-    padding: var(--small-gap);
-  }
+    .footer-nav {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--small-gap);
+      padding: var(--small-gap);
+    }
 
-  .footer-brand {
-    margin-bottom: 10px;
-  }
+    .footer-brand {
+      margin-bottom: 10px;
+    }
 
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-  }
+    .nav-menu {
+      flex-direction: column;
+      gap: 10px;
+    }
 
-  .social-icons {
-    justify-content: center;
+    .social-icons {
+      justify-content: center;
+    }
   }
 }
