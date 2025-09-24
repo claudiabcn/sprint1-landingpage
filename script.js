@@ -6,7 +6,7 @@ document.querySelectorAll(".tab").forEach((tab) => {
     tab.classList.add("active");
     document.getElementById(tab.dataset.tab).classList.add("active");
   };
-});
+}) ;
 
 const questions = document.querySelectorAll(".faq-question");
 
