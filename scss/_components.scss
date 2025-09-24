@@ -1,0 +1,201 @@
+// Buttons
+.btn {
+  @include button-base;
+
+  &-red {
+    @include button-red;
+  }
+
+  &-red2 {
+    @include button-base;
+    background-color: $primary-red;
+    color: $white;
+    border-color: $primary-red;
+  }
+
+  &-blue {
+    @include button-blue;
+  }
+
+  &-light {
+    @include button-light;
+  }
+
+  &-login-mobile {
+    @include button-base;
+    background-color: transparent;
+    color: $white;
+    border: 2px solid $white;
+
+    &:hover {
+      background-color: $white;
+      color: $dark-blue;
+    }
+  }
+}
+
+// Blue decorative box
+.blue-box {
+  position: absolute;
+  background-color: $primary-blue;
+  z-index: 0;
+}
+
+// Cards
+.card {
+  background-color: $bg-light;
+  border-radius: 10px;
+  padding: $standard-gap;
+  width: 300px;
+  box-shadow: $shadow-light;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    height: 40px;
+    margin-bottom: $small-gap;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $text-gray;
+    font-size: 0.9rem;
+    margin-bottom: $small-gap;
+  }
+
+  &:nth-child(2) {
+    margin-top: $standard-gap;
+  }
+
+  &:nth-child(3) {
+    margin-top: 60px;
+  }
+
+  .btn-blue {
+    width: 100%;
+  }
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background-color: $border-light;
+  margin-bottom: $small-gap;
+  border-top: 3px dotted $border-lighter;
+}
+
+// FAQ Items
+.faq-item {
+  border-bottom: 1px solid $border-light;
+  padding: $small-gap 0;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  color: $text-dark;
+  transition: color $transition;
+
+  &:hover {
+    color: $primary-blue;
+  }
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 10px;
+  color: $text-medium;
+  font-size: 0.95rem;
+}
+
+// Tabs
+.tab {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  font-weight: 500;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all $transition;
+  color: $text-gray;
+  position: relative;
+
+  &.active {
+    border-bottom-color: $primary-red;
+    color: $text-dark;
+  }
+
+  &:hover {
+    color: $text-dark;
+  }
+}
+
+// Mobile menu
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+
+  img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dark-blue;
+  display: none;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $standard-gap;
+}
+
+.mobile-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  li a {
+    color: $white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.mobile-social {
+  display: flex;
+  gap: $small-gap;
+
+  img {
+    height: 24px;
+    cursor: pointer;
+  }
+}
