@@ -1,0 +1,36 @@
+$primary-blue: #5267df;
+$primary-red: #fa5959;
+$dark-blue: #242946;
+$text-dark: #333;
+$text-gray: #777;
+$text-medium: #555;
+$bg-light: #f7f7f7;
+$border-light: #ddd;
+$border-lighter: #ccc;
+$white: #ffffff;
+
+// Typography
+$font-family-primary: "Rubik", sans-serif;
+$font-size-clamp: clamp(0.9rem, 1vw, 1.5rem);
+$font-size-body: clamp(0.9rem, 1vw, 1.2rem);
+$font-size-hero: clamp(2rem, 5vw, 3rem);
+$font-size-section-header: clamp(1.8rem, 4vw, 2.2rem);
+
+// Spacing
+$section-padding: 80px 40px;
+$mobile-padding: 60px 20px;
+$standard-gap: 30px;
+$small-gap: 20px;
+
+// Layout
+$border-radius: 5px;
+$max-width-container: 1200px;
+$max-width-content: 600px;
+
+// Effects
+$transition: 0.3s ease;
+$shadow-light: 0 8px 20px rgba(0, 0, 0, 0.1);
+$shadow-blue: 0 6px 16px rgba(82, 103, 223, 0.5);
+
+// Breakpoints
+$breakpoint-mobile: 768px;
