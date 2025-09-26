@@ -46,7 +46,6 @@
   }
 }
 
-// Layout mixin
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -82,7 +81,6 @@
   }
 }
 
-// Blue box decoration
 @mixin blue-decoration($width: 85%, $height: 350px, $top: 80px, $right: -50px) {
   position: absolute;
   background-color: $primary-blue;
@@ -95,7 +93,7 @@
   border-bottom-left-radius: 180px;
 }
 
-// Mobile media query
+
 @mixin mobile {
   @media (max-width: $breakpoint-mobile) {
     @content;
