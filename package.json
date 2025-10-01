@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,14 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.13",
     "tailwindcss": "^4.1.13"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudiabcn/sprint1-landingpage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/claudiabcn/sprint1-landingpage/issues"
+  },
+  "homepage": "https://github.com/claudiabcn/sprint1-landingpage#readme"
 }

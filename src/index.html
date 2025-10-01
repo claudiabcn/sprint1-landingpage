@@ -6,8 +6,70 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <header class="bg-white py-5 px-10">
+    <div class="flex justify-between items-center max-w-[1200px] mx-auto">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-2.5">
+        <img src="../images/logo-bookmark.svg" alt="Bookmark Logo" class="h-10">
+      </div>
+
+      <!-- Botón Hamburguesa (móvil) -->
+      <button id="hamburger" class="block lg:hidden text-3xl bg-none border-none cursor-pointer">
+        ☰
+      </button>
+      
+      <!-- Navegación Desktop -->
+      <nav class="hidden lg:block">
+        <ul class="flex items-center list-none gap-8">
+          <li><a href="#features" class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline">FEATURES</a></li>
+          <li><a href="#pricing" class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline">PRICING</a></li>
+          <li><a href="#contact" class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline">CONTACT</a></li>
+          <li>
+            <button class="px-4 py-2 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 border-2 border-[#fa5959] bg-white text-[#fa5959] hover:bg-[#fa5959] hover:text-white">
+              Login
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="py-20 px-10 pb-25">
+    <div class="flex items-center justify-between gap-12 flex-wrap max-w-[1200px] mx-auto px-5">
+        
+      <!-- Texto del Hero -->
+      <div class="flex-1">
+        <h1 class="text-5xl mb-6 font-medium leading-tight text-[#333]">
+          A Simple Bookmark Manager
+        </h1>
+        <p class="text-lg text-[#555] mb-7 leading-relaxed">
+          A clean and simple interface to organize your favourite websites.
+          Open a new browser tab and see your sites load instantly. Try it
+          for free.
+        </p>
+        <div class="flex gap-5 flex-wrap">
+          <button class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#5267df] text-white border-none hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]">
+            Get it on Chrome
+          </button>
+          <button class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#f7f7f7] text-[#333] border-none hover:bg-[#5267df] hover:text-white hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]">
+            Get it on Firefox
+          </button>
+        </div>
+      </div>
+
+      <!-- Imagen del Hero -->
+      <div class="w-full max-w-[500px] relative">
+        <!-- Caja azul de fondo -->
+        <div class="absolute top-20 -right-12 w-[85%] max-w-[350px] h-[350px] bg-[#5267df] rounded-bl-[180px] z-0"></div>
+        <!-- Imagen -->
+        <img src="../images/illustration-hero.svg" alt="Hero image" class="mt-5 relative z-10 max-w-full">
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>
