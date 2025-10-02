@@ -1,113 +1,218 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-  <header class="bg-white py-5 px-10">
-    <div class="flex justify-between items-center max-w-[1200px] mx-auto">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Bookmark Landing</title>
+  </head>
+  <body>
+    <header class="bg-white py-5 px-10">
+      <div class="flex justify-between items-center max-w-[1200px] mx-auto">
         <div class="flex items-center gap-2.5">
-        <img src="../images/logo-bookmark.svg" alt="Bookmark Logo" class="h-10">
-    </div>
-    <button id="hamburger" class="block lg:hidden text-3xl bg-none border-none cursor-pointer">
-        ☰
-    </button>
-      
-      <nav class="hidden lg:block">
-        <ul class="flex items-center list-none gap-8">
-          <li><a href="#features" class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline">FEATURES</a></li>
-          <li><a href="#pricing" class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline">PRICING</a></li>
-          <li><a href="#contact" class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline">CONTACT</a></li>
-          <li>
-            <button class="px-4 py-2 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 border-2 border-[#fa5959] bg-white text-[#fa5959] hover:bg-[#fa5959] hover:text-white">
-              Login
-            </button>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
-
-   <section class="py-20 px-10 pb-25">
-    <div class="flex items-center justify-between gap-12 flex-wrap max-w-[1200px] mx-auto px-5">
-        
-      <div class="flex-1">
-        <h1 class="text-5xl mb-6 font-medium leading-tight text-[#333]">
-          A Simple Bookmark Manager
-        </h1>
-        <p class="text-lg text-[#555] mb-7 leading-relaxed">
-          A clean and simple interface to organize your favourite websites.
-          Open a new browser tab and see your sites load instantly. Try it
-          for free.
-        </p>
-        <div class="flex gap-5 flex-wrap">
-          <button class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#5267df] text-white border-none hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]">
-            Get it on Chrome
-          </button>
-          <button class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#f7f7f7] text-[#333] border-none hover:bg-[#5267df] hover:text-white hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]">
-            Get it on Firefox
-          </button>
+          <img
+            src="../images/logo-bookmark.svg"
+            alt="Bookmark Logo"
+            class="h-10"
+          />
         </div>
+
+        <button id="hamburger" class="block lg:hidden cursor-pointer">
+          <img src="../images/icon-hamburger.svg" alt="Menu" class="w-6 h-6" />
+        </button>
+
+        <nav class="hidden lg:block">
+          <ul class="flex items-center list-none gap-8">
+            <li>
+              <a
+                href="#features"
+                class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline"
+                >FEATURES</a
+              >
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline"
+                >PRICING</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-[#333] font-medium hover:text-[#5267df] transition-colors no-underline"
+                >CONTACT</a
+              >
+            </li>
+            <li>
+              <button
+                class="px-4 py-2 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 border-2 border-[#fa5959] bg-white text-[#fa5959] hover:bg-[#fa5959] hover:text-white"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-
-       <div class="w-full max-w-[500px] relative">
-
-        <div class="absolute top-20 -right-12 w-[85%] max-w-[350px] h-[350px] bg-[#5267df] rounded-bl-[180px] z-0"></div>
-
-        <img src="../images/illustration-hero.svg" alt="Hero image" class="mt-5 relative z-10 max-w-full">
-      </div> 
-    </div>
-  </section>
-
-<section id="features" class="py-20 px-10">
-  <div class="max-w-[1200px] mx-auto">
-    
-      <div class="text-center max-w-[600px] mx-auto mb-16">
-      <h2 class="text-3xl font-medium text-[#333] mb-5">Features</h2>
-    <p class="text-lg text-[#555] mb-7 leading-relaxed">
-  Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
-        </p>
-        </div>
-<div class="max-w-[800px] mx-auto mb-16">
-  <div class="flex justify-center border-b border-gray-300">
-    <button class="tab-btn px-8 py-4 text-base text-[#555] cursor-pointer transition-all border-b-4 border-transparent hover:border-[#fa5959]  hover:font-bold">
-      Simple Bookmarking
-    </button>
-    <button class="tab-btn px-8 py-4 text-base text-[#555] cursor-pointer transition-all border-b-4 border-transparent hover:border-[#fa5959]  hover:font-bold">
-      Speedy Searching
-    </button>
-    <button class="tab-btn px-8 py-4 text-base text-[#555] cursor-pointer transition-all border-b-4 border-transparent hover:border-[#fa5959] hover:font-bold">
-      Easy Sharing
-    </button>
-  </div>
-</div>
-
-    <div class="flex items-center justify-between gap-16 flex-wrap">
-      <div class="flex-1 min-w-[300px] relative">
-        <div class="absolute top-20 -left-12 w-[85%] max-w-[450px] h-[300px] bg-[#5267df] rounded-br-[180px] z-0"></div>
-        <img src="../images/illustration-features-tab-1.svg" alt="Features illustration" class="relative z-10 max-w-full">
-      </div>
-
-      <div class="flex-1 min-w-[300px]">
-        <h3 class="text-3xl font-medium text-[#333] mb-5">Bookmark in one click</h3>
-        <p class="text-lg text-[#555] mb-7 leading-relaxed">
-          Organize your bookmarks however you like. Our simple drag-and-drop interface 
-          gives you complete control over how you manage your favourite sites.
-        </p>
-        <button class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#5267df] text-white border-none hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]">
-          More Info
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-[#252b46] bg-opacity-95 z-50 hidden flex-col p-10"
+    >
+      <div class="flex justify-between items-center mb-10">
+        <img
+          src="../images/logo-bookmark.svg"
+          alt="Bookmark Logo"
+          class="h-10 brightness-0 invert"
+        />
+        <button id="closeMenu" class="cursor-pointer">
+          <img src="../images/icon-close.svg" alt="Close" class="w-6 h-6" />
         </button>
       </div>
 
+      <nav class="flex flex-col gap-5 text-center">
+        <a
+          href="#features"
+          class="text-white text-xl py-4 border-t border-gray-600 hover:text-[#fa5959] transition-colors no-underline"
+          >FEATURES</a
+        >
+        <a
+          href="#pricing"
+          class="text-white text-xl py-4 border-t border-gray-600 hover:text-[#fa5959] transition-colors no-underline"
+          >PRICING</a
+        >
+        <a
+          href="#contact"
+          class="text-white text-xl py-4 border-t border-gray-600 border-b hover:text-[#fa5959] transition-colors no-underline"
+          >CONTACT</a
+        >
+        <button
+          class="mt-5 px-6 py-3 text-xl font-bold rounded-[5px] cursor-pointer transition-all duration-300 border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#252b46]"
+        >
+          LOGIN
+        </button>
+      </nav>
+
+      <div class="flex justify-center gap-8 mt-auto">
+        <img
+          src="../images/icon-facebook.svg"
+          alt="Facebook"
+          class="w-6 h-6 cursor-pointer"
+        />
+        <img
+          src="../images/icon-twitter.svg"
+          alt="Twitter"
+          class="w-6 h-6 cursor-pointer"
+        />
+      </div>
     </div>
 
-  </div>
-</section>
+    <section class="py-20 px-10">
+      <div
+        class="flex items-center justify-between gap-12 flex-wrap max-w-[1200px] mx-auto"
+      >
+        <div class="flex-1 min-w-[300px]">
+          <h1
+            class="text-3xl md:text-5xl mb-6 font-medium leading-tight text-[#333]"
+          >
+            A Simple Bookmark Manager
+          </h1>
+          <p class="text-lg text-[#555] mb-7 leading-relaxed">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="flex gap-5 flex-wrap">
+            <button
+              class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#5267df] text-white border-none hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]"
+            >
+              Get it on Chrome
+            </button>
+            <button
+              class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#f7f7f7] text-[#333] border-none hover:bg-[#5267df] hover:text-white hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]"
+            >
+              Get it on Firefox
+            </button>
+          </div>
+        </div>
 
-</body>
+        <div class="flex-1 min-w-[300px] relative overflow-hidden">
+          <div
+            class="absolute top-20 -right-12 w-[85%] max-w-[350px] h-[350px] bg-[#5267df] rounded-bl-[180px] z-0"
+          ></div>
+          <img
+            src="../images/illustration-hero.svg"
+            alt="Hero image"
+            class="mt-5 relative z-10 max-w-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-20 px-10">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="text-center max-w-[600px] mx-auto mb-16">
+          <h2 class="text-3xl font-medium text-[#333] mb-5">Features</h2>
+          <p class="text-lg text-[#555] leading-relaxed">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+        </div>
+
+        <div class="max-w-[800px] mx-auto mb-16 overflow-x-auto">
+          <div
+            class="flex justify-center border-b border-gray-300 min-w-[600px]"
+          >
+            <button
+              class="tab-btn px-4 md:px-8 py-4 text-sm md:text-base text-[#555] cursor-pointer transition-all border-b-4 border-transparent hover:border-[#fa5959] hover:font-bold"
+            >
+              Simple Bookmarking
+            </button>
+            <button
+              class="tab-btn px-4 md:px-8 py-4 text-sm md:text-base text-[#555] cursor-pointer transition-all border-b-4 border-transparent hover:border-[#fa5959] hover:font-bold"
+            >
+              Speedy Searching
+            </button>
+            <button
+              class="tab-btn px-4 md:px-8 py-4 text-sm md:text-base text-[#555] cursor-pointer transition-all border-b-4 border-transparent hover:border-[#fa5959] hover:font-bold"
+            >
+              Easy Sharing
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-16 flex-wrap">
+          <div class="flex-1 min-w-[300px] relative overflow-hidden">
+            <div
+              class="absolute top-20 -left-12 w-[85%] max-w-[450px] h-[300px] bg-[#5267df] rounded-br-[180px] z-0"
+            ></div>
+            <img
+              src="../images/illustration-features-tab-1.svg"
+              alt="Features illustration"
+              class="relative z-10 max-w-full"
+            />
+          </div>
+
+          <div class="flex-1 min-w-[300px]">
+            <h3 class="text-2xl md:text-3xl font-medium text-[#333] mb-5">
+              Bookmark in one click
+            </h3>
+            <p class="text-lg text-[#555] mb-7 leading-relaxed">
+              Organize your bookmarks however you like. Our simple drag-and-drop
+              interface gives you complete control over how you manage your
+              favourite sites.
+            </p>
+            <button
+              class="px-6 py-3 text-base font-bold rounded-[5px] cursor-pointer transition-all duration-300 bg-[#5267df] text-white border-none hover:shadow-[0_6px_16px_rgba(82,103,223,0.5)]"
+            >
+              More Info
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
