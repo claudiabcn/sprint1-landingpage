@@ -23,15 +23,21 @@
     });
   });
 
-document.querySelectorAll(".tab").forEach((tab) => {
-  tab.onclick = () => {
-    document
-      .querySelectorAll(".tab, .tab-panel")
-      .forEach((el) => el.classList.remove("active"));
-    tab.classList.add("active");
-    document.getElementById(tab.dataset.tab).classList.add("active");
-  };
-});
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+   
+      tabButtons.forEach(b => b.classList.remove('active-tab'));
+      btn.classList.add('active-tab');
+
+      tabContents.forEach((content, i) => {
+        content.classList.toggle('hidden', i !== index);
+        content.classList.toggle('block', i === index);
+      });
+    });
+  });
 
 const questions = document.querySelectorAll(".faq-question");
 
