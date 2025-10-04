@@ -39,11 +39,26 @@
     });
   });
 
-const questions = document.querySelectorAll(".faq-question");
+const faqButtons = document.querySelectorAll('.faq-item button');
 
-questions.forEach((q) => {
-  q.addEventListener("click", () => {
-    const answer = q.nextElementSibling;
-    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('svg');
+      const isActive = !content.classList.contains('hidden');
+
+      // Tanca tots
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-item button').forEach(btn => {
+        btn.classList.remove('text-[#fa5959]');
+        btn.querySelector('svg').classList.remove('rotate-180', 'text-[#fa5959]');
+      });
+
+      // Obre si no estava obert
+      if (!isActive) {
+        content.classList.remove('hidden');
+        button.classList.add('text-[#fa5959]');
+        icon.classList.add('rotate-180', 'text-[#fa5959]');
+      }
+    });
   });
-});
