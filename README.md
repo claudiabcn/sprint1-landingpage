@@ -1,8 +1,8 @@
 # 🚀 Sprint 1 - Maquetación de una landing page
 
 Construir una landing page para Bookmark utilizando los diseños proporcionados en la carpeta designs. 
-El objetivo es dominar las buenas prácticas de maquetación, el diseño responsive y la accesibilidad, trabajando de forma iterativa y progresiva. 
-El mismo diseño se ha implementado tres veces usando: CSS puro (Vanilla CSS) SASS Tailwind CSS
+El objetivo es dominar las buenas prácticas de maquetación, el diseño responsive, trabajando de forma iterativa y progresiva. 
+El mismo diseño se ha implementado tres veces usando: CSS puro (Vanilla CSS), SASS y Tailwind.
 
 ## 🚧  Estructura del proyecto
 
