@@ -1,7 +1,9 @@
-⚡️ SPRINT 1.1 - Landing page
+⚡️ SPRINT 1: - Parte 1/3: Maquetación de una landing page con HTML y CSS (Vanilla)
 
 Construir una landing page para Bookmark utilizando los diseños proporcionados en la carpeta designs. 
-El objetivo es dominar las buenas prácticas de maquetación, el diseño responsive y la accesibilidad, trabajando de forma iterativa y progresiva. Usando  HTML y CSS Vanilla.
+El objetivo es dominar las buenas prácticas de maquetación, el diseño responsive y la accesibilidad, trabajando de forma iterativa y progresiva. Usando  HTML y CSS Vanilla  sin frameworks ni preprocesadores.
+
+🔗 Repositorio del proyecto: https://github.com/claudiabcn/sprint1-landingpage - Branch: feature/vanilla-implementation
 
 🎯 Objetivos:
 Creación de una página web utilizando HTML y CSS.
@@ -16,7 +18,7 @@ index.html, styles.css, main.js, README.md
 
 🛠 Instalación:
 Clonar el Repositorio
-git clone https://github.com/claudiabcn/sprint1-landingpag
+git clone https://github.com/claudiabcn/sprint1-landingpage
 
 ⭐ Aprendizajes y retos encontrados:
 He aprendido a usar Git, he aprendido mucho de HTML y CSS, partía de 0... Me ha ayudado la IA, aunque he intentado que no fuera así, pero el tiempo es muy limitado y pienso que ha sido positivo. 
