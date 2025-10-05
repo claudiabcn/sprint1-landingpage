@@ -1,17 +1,19 @@
-# sprint1-landingpage
-Construir una landing page para Bookmark utilizando los diseños proporcionados en la carpeta designs. El objetivo es dominar las buenas prácticas de maquetación, el diseño responsive y la accesibilidad, trabajando de forma iterativa y progresiva. Usando html5 y CSS.
+🚧 Sprint 1 - Maquetación de una landing page
 
-Repositorio del proyecto: https://github.com/claudiabcn/sprint1-landingpage 
-Branch: feature/vanilla-implementation
+Construir una landing page para Bookmark utilizando los diseños proporcionados en la carpeta designs. 
+El objetivo es dominar las buenas prácticas de maquetación, el diseño responsive y la accesibilidad, trabajando de forma iterativa y progresiva. 
+El mismo diseño se ha implementado tres veces usando: CSS puro (Vanilla CSS) SASS Tailwind CSS
 
-💻 Stack Tecnológico
-- HTML5
-- CSS
-- Git/GitHub
+🧩 Estructura del proyecto
+
+El proyecto está organizado en ramas de Git separadas, cada una contiene una versión diferente del mismo diseño:
+
+  feature/implementation-vanilla: implementación usando CSS
   
-🛑 Desafíos Encontrados:
+  featureimplementation-sass: el mismo diseño refactorizado con SASS
+  
+  feature/implementation-tailwind: versión final utilizando Tailwind CSS
 
-Conocer git y github.
-Aprender HTML5 y CSS.
-Diseño responsive, version mobile, version desktop. Poder hacer las tres a la vez sin que se modifique el resto.
-Etiquetas semánticas, y usar menos el div.
+🛠 Instalación:
+Clonar el Repositorio
+git clone https://github.com/claudiabcn/sprint1-landingpage
