@@ -14,6 +14,7 @@ Refactorización con SASS
 Git, HTML y CSS.
 
 📋 Archivos:
+```
 sprint1-landingpage/
   📁 designs
   📁 images
@@ -21,6 +22,7 @@ sprint1-landingpage/
   ├── 📄 script.js
   ├── 📄 style.css
   ├── 📄 README.md
+``` 
 
 🛠 Instalación:
 Clonar el Repositorio
