@@ -1,72 +1,42 @@
-  const hamburger = document.getElementById('hamburger');
-  const closeMenu = document.getElementById('closeMenu');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const hamburgerIcon = document.querySelector('#hamburger img');
+const hamburger = document.getElementById('hamburger');
+const closeMenu = document.getElementById('closeMenu');
+const mobileMenu = document.getElementById('mobileMenu');
 
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.remove('hidden');
-    mobileMenu.classList.add('flex');
-    hamburgerIcon.src = "../images/icon-close.svg";
-  });
+hamburger.onclick = () => mobileMenu.classList.replace('hidden', 'flex');
+closeMenu.onclick = () => mobileMenu.classList.replace('flex', 'hidden');
+mobileMenu.querySelectorAll('a').forEach(a => a.onclick = () => mobileMenu.classList.replace('flex', 'hidden'));
 
-  closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    mobileMenu.classList.remove('flex');
-    hamburgerIcon.src = "../images/icon-hamburger.svg";
-  });
 
-  document.querySelectorAll('#mobileMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('flex');
-      hamburgerIcon.src = "../images/icon-hamburger.svg";
-    });
-  });
-
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabButtons.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
-    
-    tabButtons.forEach(b => {
-      b.classList.remove('text-[#242A45]', 'after:opacity-100');
-      b.classList.add('text-[#9194A2]', 'after:opacity-0');
-    });
-    
-    btn.classList.remove('text-[#9194A2]', 'after:opacity-0');
+document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+  btn.onclick = () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('text-[#242A45]', 'after:opacity-100'));
     btn.classList.add('text-[#242A45]', 'after:opacity-100');
-
-    tabContents.forEach(content => {
-      content.classList.add('hidden');
-      content.classList.remove('block');
-    });
-    
-    if (tabContents[index]) {
-      tabContents[index].classList.remove('hidden');
-      tabContents[index].classList.add('block');
-    }
-  });
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+    document.querySelectorAll('.tab-content')[i].classList.remove('hidden');
+  };
 });
 
-const faqButtons = document.querySelectorAll('.faq-item button');
 
-  faqButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector('svg');
-      const isActive = !content.classList.contains('hidden');
+document.querySelectorAll('.faq-item button').forEach(btn => {
+  btn.onclick = () => {
+    const content = btn.nextElementSibling;
+    const isOpen = !content.classList.contains('hidden');
+    document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+    if (!isOpen) content.classList.remove('hidden');
+  };
+});
 
-      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
-      document.querySelectorAll('.faq-item button').forEach(btn => {
-        btn.classList.remove('text-[#fa5959]');
-        btn.querySelector('svg').classList.remove('rotate-180', 'text-[#fa5959]');
-      });
 
-      if (!isActive) {
-        content.classList.remove('hidden');
-        button.classList.add('text-[#fa5959]');
-        icon.classList.add('rotate-180', 'text-[#fa5959]');
-      }
-    });
-  });
+const emailInput = document.getElementById('emailInput');
+const errorIcon = document.getElementById('errorIcon');
+const errorMessage = document.getElementById('errorMessage');
+
+emailInput.oninput = () => {
+  const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+  errorIcon.classList.toggle('hidden', isValid || !emailInput.value);
+  errorMessage.classList.toggle('hidden', isValid || !emailInput.value);
+  emailInput.classList.toggle('ring-2', !isValid && emailInput.value);
+  emailInput.classList.toggle('ring-red-500', !isValid && emailInput.value);
+};
+
+emailInput.closest('form').onsubmit = e => e.preventDefault();
