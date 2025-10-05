@@ -9,7 +9,22 @@ El uso de Sass permite modularizar estilos, reutilizar variables y mixins, y mej
 
 💻 Tecnología: Git, Sass, HTML y CSS (generado automáticamente desde Sass).
 
-📋 Archivos: index.html, styles.css, main.js, README.md
+📋 Archivos:
+sprint1-landingpage/
+├── 📄 index.html
+├── 📄 script.js
+├── 📄 README.md
+📁 designs
+📁 images
+├── 📁 scss
+│ ├── 📄 _components.scss
+│ ├── 📄 _variables.scss
+│ ├── 📄 _mixins.scss
+│ ├── 📄 _layout.scss  
+│ └── 📄 _responsive.scss 
+│ └── 📄 main.scss 
+│ └── 📄 main.css 
+│ └── 📄 main.css.map 
 
 🛠 Instalación: Clonar el Repositorio git clone https://github.com/claudiabcn/sprint1-landingpage
 
