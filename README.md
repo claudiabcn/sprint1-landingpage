@@ -13,8 +13,14 @@ Refactorización con SASS
 💻 Tecnología:
 Git, HTML y CSS.
 
-📋 Archivos: 
-index.html, styles.css, main.js, README.md
+📋 Archivos:
+sprint1-landingpage/
+  📁 designs
+  📁 images
+  ├── 📄 index.html
+  ├── 📄 script.js
+  ├── 📄 style.css
+  ├── 📄 README.md
 
 🛠 Instalación:
 Clonar el Repositorio
