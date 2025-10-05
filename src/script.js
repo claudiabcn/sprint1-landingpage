@@ -23,21 +23,31 @@
     });
   });
 
-  const tabButtons = document.querySelectorAll('.tab-btn');
-  const tabContents = document.querySelectorAll('.tab-content');
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
 
-  tabButtons.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-   
-      tabButtons.forEach(b => b.classList.remove('active-tab'));
-      btn.classList.add('active-tab');
-
-      tabContents.forEach((content, i) => {
-        content.classList.toggle('hidden', i !== index);
-        content.classList.toggle('block', i === index);
-      });
+tabButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    
+    tabButtons.forEach(b => {
+      b.classList.remove('text-[#242A45]', 'after:opacity-100');
+      b.classList.add('text-[#9194A2]', 'after:opacity-0');
     });
+    
+    btn.classList.remove('text-[#9194A2]', 'after:opacity-0');
+    btn.classList.add('text-[#242A45]', 'after:opacity-100');
+
+    tabContents.forEach(content => {
+      content.classList.add('hidden');
+      content.classList.remove('block');
+    });
+    
+    if (tabContents[index]) {
+      tabContents[index].classList.remove('hidden');
+      tabContents[index].classList.add('block');
+    }
   });
+});
 
 const faqButtons = document.querySelectorAll('.faq-item button');
 
@@ -47,14 +57,12 @@ const faqButtons = document.querySelectorAll('.faq-item button');
       const icon = button.querySelector('svg');
       const isActive = !content.classList.contains('hidden');
 
-      // Tanca tots
       document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
       document.querySelectorAll('.faq-item button').forEach(btn => {
         btn.classList.remove('text-[#fa5959]');
         btn.querySelector('svg').classList.remove('rotate-180', 'text-[#fa5959]');
       });
 
-      // Obre si no estava obert
       if (!isActive) {
         content.classList.remove('hidden');
         button.classList.add('text-[#fa5959]');
