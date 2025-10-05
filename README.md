@@ -1,4 +1,4 @@
-⚡️ SPRINT 1: - Parte 2/3: Rehacer la maquetación de una landing page con Sass
+# ⚡️ SPRINT 1: - Parte 2/3: Rehacer la maquetación de una landing page con Sass
 
 En esta segunda parte del proyecto, utilizaremos sass, un procesador de CSS, y remaquetaremos lo anterior hecho vanilla (desarrollada con HTML + CSS).
 El uso de Sass permite modularizar estilos, reutilizar variables y mixins, y mejorar la escalabilidad del proyecto.
