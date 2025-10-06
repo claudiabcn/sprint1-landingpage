@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 .header {
   background-color: $white;
   padding: 20px 40px;

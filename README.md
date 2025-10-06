@@ -31,8 +31,18 @@ sprint1-landingpage/
 │ └── 📄 main.css.map 
 ```
 
+## 🧵 Compilación de Sass:
+Para que los estilos de Sass se transformen automáticamente en CSS, es necesario compilar con el modo --watch, que detecta los cambios y actualiza el archivo CSS en tiempo real.
+
+Ejecutar este comando desde la raíz del proyecto:
+sass --watch scss/main.scss:scss/main.css
+
 ## 🛠 Instalación:
 Clonar el Repositorio git clone https://github.com/claudiabcn/sprint1-landingpage
+
+Compilar Sass con el comando (--watch)
+
+
 
 ## ⭐ Aprendizajes y retos encontrados: 
 He aprendido a usar Sass. La migración a SASS sin alterar el diseño ha sido un reto.

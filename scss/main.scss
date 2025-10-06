@@ -1,21 +1,9 @@
+@use "variables" as *;
 @use "base";
 @use "components";
 @use "layout";
-@use "mixins";
+@use "mixins" as *;
 @use "responsive";
-@use "variables";
+
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin button-base {
   padding: 8px 16px;
   font-size: $font-size-clamp;
@@ -98,7 +100,6 @@
     @content;
   }
 }
-
 @mixin tablet {
   @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet}) {
     @content;
