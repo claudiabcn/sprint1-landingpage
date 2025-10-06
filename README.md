@@ -1,2 +1,39 @@
-# sprint1-landingpage
-Construir una landing page para Bookmark utilizando los diseños proporcionados en la carpeta designs. El objetivo es que domines las buenas prácticas de maquetación, el diseño responsive y la accesibilidad, trabajando de forma iterativa y progresiva.
+# ⚡️ SPRINT 1: - Parte 2/3: Rehacer la maquetación de una landing page con Sass
+
+En esta segunda parte del proyecto, utilizaremos sass, un procesador de CSS, y remaquetaremos lo anterior hecho vanilla (desarrollada con HTML + CSS).
+El uso de Sass permite modularizar estilos, reutilizar variables y mixins, y mejorar la escalabilidad del proyecto.
+
+## 🔗 Repositorio del proyecto: 
+https://github.com/claudiabcn/sprint1-landingpage - Branch: feature/sass-implementation
+
+## 🎯 Objetivos:
+Remaquetación de una página web utilizando sass.
+
+## 💻 Tecnología: 
+Git, Sass, HTML y CSS (generado automáticamente desde Sass).
+
+## 📋 Archivos:
+```
+sprint1-landingpage/
+├── 📄 index.html
+├── 📄 script.js
+├── 📄 README.md
+📁 designs
+📁 images
+├── 📁 scss
+│ ├── 📄 _components.scss
+│ ├── 📄 _variables.scss
+│ ├── 📄 _mixins.scss
+│ ├── 📄 _layout.scss  
+│ └── 📄 _responsive.scss 
+│ └── 📄 main.scss 
+│ └── 📄 main.css 
+│ └── 📄 main.css.map 
+```
+
+## 🛠 Instalación:
+Clonar el Repositorio git clone https://github.com/claudiabcn/sprint1-landingpage
+
+## ⭐ Aprendizajes y retos encontrados: 
+He aprendido a usar Sass. La migración a SASS sin alterar el diseño ha sido un reto.
+El tema de la compilación y hacer que quede igual que la rama vanilla.
