@@ -31,6 +31,9 @@ sprint1-landingpage/
 ## 🛠 Instalación: 
 Clonar el Repositorio git clone https://github.com/claudiabcn/sprint1-landingpage
 
+## 📸 Demo:  
+https://bookmark-tailwind-claudiabcn.netlify.app/
+
 ## ⭐ Aprendizajes y retos encontrados: 
 He aprendido a usar Tailwind. La descarga de la última versión, al principio me fallaba el tema de la compilación.
 La transición de Sass a la metodología de clases de Tailwind ha sido demasiado compleja, por lo que he optado por empezar de nuevo. He tenido que hacer conversión de iconos SVG a inline para permitir hovers.
