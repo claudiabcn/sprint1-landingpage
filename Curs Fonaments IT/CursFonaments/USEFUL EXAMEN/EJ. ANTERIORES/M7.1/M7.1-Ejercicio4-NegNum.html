@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="n1" />
+    <input type="number" id="n2" />
+    <input type="button" value="Negative number" onclick="negativeCheck()" />
+    <p id="s"></p>
+    <script>
+      function negativeCheck() {
+        let n1 = parseInt(document.getElementById("n1").value);
+        let n2 = parseInt(document.getElementById("n2").value);
+        if ((n1 < 0 && n2 >= 0) || (n2 < 0 && n1 >= 0)) {
+          document.getElementById("s").innerHTML =
+            "Un dels dos números és negatiu";
+        } else if ((n1 < 0 && n2 < 0) || (n2 >= 0 && n1 >= 0)) {
+          document.getElementById("s").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+L’usuari/ària ha d’introduir dos números, el programa retornarà “Un dels dos
+números és negatiu”, només si un dels dos números és negatiu.

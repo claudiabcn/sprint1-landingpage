@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="size" placeholder="Indica el tamaño" />
+    <input type="button" value="Dibuja" onclick="show()" />
+    <p id="mostrar"></p>
+    <script>
+      function show() {
+        let table = figuraNumeral();
+        document.getElementById("mostrar").innerHTML = table;
+      }
+
+      function figuraNumeral() {
+        let size = parseInt(document.getElementById("size").value);
+        let table = "";
+        for (let i = 1; i < size + 1; i++) {
+          for (let j = 1; j < i + 1; j++) {
+            table += i;
+          }
+          table += "<br>";
+        }
+
+        return table;
+      }
+    </script>
+  </body>
+</html>

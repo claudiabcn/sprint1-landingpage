@@ -1,0 +1,33 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="comida" placeholder="Escribe el alimento">
+        <input type="button" value="Busca" onclick="comida()">
+        <p id="s"></p>
+
+        <script>
+            function comida(){
+                let alimento = document.getElementById('comida').value;
+                const supermercado = ["sandía", "helado", "carne", "pescado", "frutos secos"];
+
+                for (let i = 0; i<supermercado.length;i++) {
+
+                    if (alimento == supermercado[i]) {
+
+                    document.getElementById('s').innerHTML = "Está en el super"
+                    }
+
+                    else {
+                         document.getElementById('s').innerHTML = "No está en el super"
+                    }
+                }
+            }
+
+        </script>
+    </body>
+    </html>

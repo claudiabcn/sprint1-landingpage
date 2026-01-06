@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Coincideix si o no" onclick="show()" />
+    <p id="mostrar"></p>
+    <script>
+      function show() {
+        let resultado = arrays();
+        document.getElementById("mostrar").innerHTML = resultado;
+      }
+
+      function arrays() {
+        const numeros1 = [];
+        const numeros2 = [];
+
+        for (let i = 0; i < 10; i++) {
+          let numeroAleatori = Math.ceil(Math.random() * 10);
+          numeros1.push(numeroAleatori);
+        }
+        for (let i = 0; i < 10; i++) {
+          let numeroAleatori2 = Math.ceil(Math.random() * 120);
+          numeros2.push(numeroAleatori2);
+        }
+
+        for (let i = 0; i < 10; i++) {
+          for (let j = 0; j < 10; j++) {
+            if (numeros1[i] === numeros2[j]) {
+              let num1 = numeros1[i];
+              let num2 = numeros2[j];
+              return "Hay un número que coincide y es el: " + numeros1[i];
+            }
+          }
+        }
+        return "No se han encontrado coincidencias.";
+      }
+    </script>
+  </body>
+</html>
+
+Tenemos dos arrays de números Crear una función que devuelva true si algún
+número coincide en los dos arrays, en caso contrario, devuelva false Otra
+función, que devuelva el primer número coincidente de los dos arrays, si la
+función anterior ha devuelto true

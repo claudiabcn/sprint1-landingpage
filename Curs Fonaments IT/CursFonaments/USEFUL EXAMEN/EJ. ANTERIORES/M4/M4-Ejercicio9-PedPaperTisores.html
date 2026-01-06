@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document M4-7</title>
+</head>
+
+<body>
+    <input type="text" id="t1" placeholder="Di piedra, papel o tijera">
+    <input type="button" value="Jugar" onclick="juego()">
+
+    <p id="mostrar"> </p>
+
+
+    <script src="scriptsM4-9.js"> </script>
+// Aquesta línia de codi: 
+
+let numRandom = Math.floor(Math.random() * (4 - 1)) + 1
+Retorna un nombre aleatori entre min inclòs (1) i màx. exclòs (4).
+
+Escriu un programa que et permeti jugar pedra, paper o tisora ​​amb l'ordinador.
+
+Per a això l'ordinador haurà de generar un nombre aleatori entre 1 i 3 que representi pedra, paper o tisora ​​respectivament, i l'usuari/ària haurà de respondre al seu torn amb un nombre entre l'1 i el 3 després de mostrar la següent pantalla:
+
+Juguem a pedra, paper o tisora:
+
+Si l'usuari/ària indica algun nombre diferent del sol·licitat, haurà d'aparèixer el següent missatge:
+«Entenc que no vols jugar. Adeu»
+
+En cas contrari, indicar el guanyador/a de la següent manera:
+
+Jo xxx i tu xxx. He guanyat!, o Has guanyat!
+
+Segons sigui el cas. Exemple: «Jo paper i tu tisora. Has guanyat!»
+</body>
+
+</html>

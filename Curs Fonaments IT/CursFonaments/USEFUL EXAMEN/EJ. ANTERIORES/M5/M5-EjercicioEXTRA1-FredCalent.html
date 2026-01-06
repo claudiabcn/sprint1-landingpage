@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Endevina el nombre" onclick="calent()" />
+
+    <p id="show"></p>
+
+    <script>
+      function calent() {
+        let numRandom = Math.floor(Math.random() * (501 - 1)) + 1;
+        let num1;
+        console.log(numRandom);
+
+        do {
+          num1 = parseInt(prompt("Introdueix un número"));
+          if (num1 > 500 || num1 < 1) {
+            alert("Aquest nombre no està comprés entre 0 i 500.");
+          } else if (numRandom > num1 && numRandom - num1 >= 50) {
+            alert("Fred, fred, el teu nombre és més petit que el meu.");
+          } else if (numRandom < num1 && num1 - numRandom >= 50) {
+            alert("Fred, fred, el teu nombre és més gran que el meu.");
+          } else if (
+            numRandom > num1 &&
+            numRandom - num1 < 50 &&
+            numRandom - num1 > 15
+          ) {
+            alert("Tebi, tebi, el teu nombre és més petit que el meu.");
+          } else if (
+            numRandom < num1 &&
+            num1 - numRandom < 50 &&
+            num1 - numRandom > 15
+          ) {
+            alert("Tebi, tebi, el teu nombre és més gran que el meu.");
+          } else if (numRandom > num1 && numRandom - num1 < 15) {
+            alert("Calent, calent el teu nombre és més petit que el meu.");
+          } else if (numRandom < num1 && num1 - numRandom < 15) {
+            alert("Calent, calent el teu nombre és més gran que el meu.");
+          } else if (num1 == numRandom) {
+            alert("Has acertat! És el nombre " + num1);
+          }
+        } while (num1 !== numRandom);
+      }
+    </script>
+  </body>
+</html>

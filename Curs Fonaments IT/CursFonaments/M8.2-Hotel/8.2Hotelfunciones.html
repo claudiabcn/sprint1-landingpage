@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Gestión de hoteles</h1>
+
+    <section id="alta">
+      <h2>Dar de alta un hotel</h2>
+      <label for="nombreAlta">Nombre:</label>
+      <input type="text" id="nombreAlta" placeholder="Nombre" />
+      <label for="habitacionesAlta">Habitaciones:</label>
+      <input
+        type="number"
+        id="habitacionesAlta"
+        placeholder="Número habitaciones"
+      />
+      <label for="plantasAlta">Plantas:</label>
+      <input type="number" id="plantasAlta" placeholder="Número plantas" />
+      <label for="superficieAlta">Superficie:</label>
+      <input type="number" id="superficieAlta" placeholder="Superfície" />
+
+      <button onclick="crearHotel()">Crear hotel</button>
+    </section>
+
+    <section id="ver">
+      <h2>Ver un hotel</h2>
+      <label for="nombreVer">Nombre:</label>
+      <input type="text" id="nombreVer" placeholder="Nombre del hotel" />
+      <button onclick="verHotel()">Ver hotel</button>
+      <p id="mostrarHotel"></p>
+    </section>
+    <section id="modificar">
+      <h2>Modificar un hotel</h2>
+      <label for="nombreMod">Nombre:</label>
+      <input type="text" id="nombreMod" placeholder="Nombre del hotel" />
+      <select id="campoMod">
+        <option value="habitaciones">Habitaciones</option>
+        <option value="plantas">Plantas</option>
+        <option value="superficie">Superficie</option>
+      </select>
+      <label for="valorMod">Valor nuevo:</label>
+      <input type="number" id="valorMod" placeholder="Valor nuevo" />
+      <button onclick="modificarHotel()">Modificar hotel</button>
+    </section>
+    <section id="eliminar">
+      <h2>Eliminar un hotel</h2>
+      <label for="nombreBaja">Nombre:</label>
+      <input type="text" id="nombreBaja" placeholder="Nombre" />
+      <button onclick="eliminarHotel()">Eliminar hotel</button>
+    </section>
+    <section id="mostrar">
+      <h2>Mostrar todos los hoteles</h2>
+      <button onclick="mostrarTodos()">Mostrar</button>
+      <p id="mostrarTodos"></p>
+    </section>
+    <script src="8.2-Hotel.js"></script>
+    <script src="funciones.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Troba parells" onclick="recollirParells()" />
+    <p id="s"></p>
+    <script>
+      function recollirParells() {
+        let parells = [];
+        let number;
+        number = parseInt(prompt("Introdueix nombres parells "));
+
+        while (number % 2 == 0) {
+          parells.push(number);
+          number = parseInt(prompt("Introdueix un altre parell "));
+        }
+
+        document.getElementById("s").innerHTML = parells;
+      }
+    </script>
+  </body>
+</html>
+L'usuari introdueix nombres parells fins que introdueix un nombre imparell.
+Llavors el programa s'acaba i es mostra per pantalla, el número total de parells
+introduits i els valors parells introduits.

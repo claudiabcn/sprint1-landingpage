@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Troba un nombre primer" onclick="esPrimo()" />
+    <p id="s"></p>
+    <script>
+      function esPrimo() {
+        var primo = false;
+
+        while (primo == false) {
+          var numero = prompt("Escoge un número: ");
+          if (numero > 1) {
+            primo = validarPrimo(numero);
+          }
+        }
+
+        document.getElementById("s").innerHTML =
+          "Exacte, el número " + numero + " és primer.";
+      }
+
+      function validarPrimo(numero) {
+        let primo = true;
+        let i = 2;
+        while (primo && i < numero) {
+          if (numero % i == 0) {
+            primo = false;
+          }
+          i++;
+        }
+        return primo;
+      }
+    </script>
+  </body>
+</html>
+
+L’usuari/ària ha d’introduir números fins que introdueixi un nombre primer. En
+el moment que l’usuari/ària introdueixi un nombre primer, el programa ha de
+treure per pantalla el següent missatge: “Exacte, el número “x” és primer!”

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen final Claudia - Bombers</title>
+  </head>
+  <body>
+    <h1>Estació de bombers</h1>
+    <p id="mostrar"></p>
+
+    <h3>Introdueix el DNI del Bomber per a la seva identificació</h3>
+    <label>DNI: <input type="text" id="dni" placeholder="DNI" /></label>
+    <br />
+    <h4>Dades addicionals per donar d'alta un bomber</h4>
+    <label>Nom: <input type="text" id="nom" placeholder="Nom" /></label>
+    <label>Edat: <input type="number" id="edat" placeholder="Edat" /></label>
+    <label>Pes: <input type="number" id="pes" placeholder="Pes" /></label>
+    <button type="button" onclick="crearBomber()">Crear Bomber</button>
+    <br />
+    <h4>Mostra informació de bombers</h4>
+    <button type="button" onclick="mostrarBomber()">Mostrar Bomber</button>
+    <button type="button" onclick="mostrarIncidentsBomber()">
+      Mostrar Incidents del Bomber
+    </button>
+    <h4>Gestió de certificacions</h4>
+    <label for="certificacio">Certificacions:</label>
+    <select id="certificacio">
+      <option value="">-- Selecciona --</option>
+      <option value="Rescat subacuàtic">Rescat subacuàtic</option>
+      <option value="Salvar a gossets">Salvar a gossets</option>
+      <option value="Manipulació de tòxics">Manipulació de tòxics</option>
+      <option value="Salvar a conillets">Salvar a conillets</option>
+      <option value="Saltar per edificis">Saltar per edificis</option>
+      <option value="Rescat en helicòpter">Rescat en helicòpter</option>
+      <option value="Salvar a gatets">Salvar a gatets</option>
+      <option value="Salvar a bebés">Salvar a bebés</option>
+      <option value="Correr a 50 km hora">Correr a 50 km hora</option>
+    </select>
+
+    <button type="button" onclick="comprovarCertificacio()">
+      Comprova si té la certificació
+    </button>
+    <button type="button" onclick="aprendreCertificacions()">
+      Aprendre certificació
+    </button>
+    <button type="button" onclick="mostrarCertificacionsRevocades()">
+      Veure certificacions revocades
+    </button>
+    <br />
+    <h4>Gestió de incidents</h4>
+    <label for="incident">Incidents:</label>
+    <select id="incident">
+      <option value="">-- Selecciona --</option>
+      <option value="1">Incendi</option>
+      <option value="2">Accident de tràfic</option>
+      <option value="3">Accident aeri</option>
+      <option value="4">Tsunami</option>
+    </select>
+    <button type="button" onclick="assignarIncident()">Assignar Incident</button
+    ><br />
+
+    <script src="Clases-inheritance.js"></script>
+    <script src="Clases-other.js"></script>
+    <script src="functions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>1. Cuadrado</h4>
+    <h4>2. Triángulo</h4>
+    <h4>3. Rectangulo</h4>
+    <h4>4. Círculo</h4>
+    <input type="number" id="option" />
+    <input type="button" value="Calcular" onclick="miFuncion()" />
+    <p id="show"></p>
+    <script>
+      function miFuncion() {
+        let option = parseInt(document.getElementById("option").value);
+        let area;
+        switch (option) {
+          case 1:
+            area = cuadrado();
+            break;
+          case 2:
+            area = triangulo();
+            break;
+          case 3:
+            area = rectangulo();
+            break;
+          case 4:
+            area = circulo();
+            break;
+        }
+        document.getElementById("show").innerHTML =
+          "El área de esta figura en cm*cm es: " + area.toFixed(2);
+      }
+      function cuadrado() {
+        let ladoC;
+        do {
+          ladoC = parseInt(prompt("Escribe en cm el lado"));
+        } while (isNaN(ladoC));
+        let areaCuadrado = ladoC * ladoC;
+        return areaCuadrado;
+      }
+      function triangulo() {
+        let base;
+        let altura;
+        do {
+          base = parseInt(prompt("Escribe en cm la base"));
+        } while (isNaN(base));
+        do {
+          altura = parseInt(prompt("Escribe en cm la altura"));
+        } while (isNaN(altura));
+        let areaTriangulo = (base * altura) / 2;
+        return areaTriangulo;
+      }
+      function rectangulo() {
+        let ladoBase;
+        do {
+          ladoBase = parseInt(prompt("Escribe en cm el lado base"));
+        } while (isNaN(ladoBase));
+        let ladoAltura;
+        do {
+          ladoAltura = parseInt(prompt("Escribe en cm el lado altura"));
+        } while (isNaN(ladoAltura));
+        let areaRectangulo = ladoBase * ladoAltura;
+        return areaRectangulo;
+      }
+      function circulo() {
+        let radio;
+        do {
+          radio = parseInt(prompt("Escribe en cm el radio"));
+        } while (isNaN(radio));
+        const PI = 3.1415;
+        let areaCirculo = PI * radio * radio;
+        return areaCirculo;
+      }
+    </script>
+  </body>
+</html>

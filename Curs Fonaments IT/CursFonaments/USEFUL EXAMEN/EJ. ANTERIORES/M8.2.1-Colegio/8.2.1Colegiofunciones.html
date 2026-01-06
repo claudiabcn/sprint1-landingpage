@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Gestión de colegios</h1>
+
+    <p id="mensajeMostrado"></p>
+
+    <section id="alta">
+      <h2>Dar de alta un colegio</h2>
+      <label for="nombreAlta">Nombre:</label>
+      <input type="text" id="nombreAlta" placeholder="Nombre" />
+      <label for="alumnosAlta">Alumnos:</label>
+      <input type="number" id="alumnosAlta" placeholder="Número alumnos" />
+      <label for="profesoresAlta">Profesores:</label>
+      <input
+        type="number"
+        id="profesoresAlta"
+        placeholder="Número profesores"
+      />
+      <label for="patioAlta">Patio:</label>
+      <input type="number" id="patioAlta" placeholder="Patio" />
+
+      <button onclick="crearColegio()">Crear colegio</button>
+    </section>
+
+    <section id="ver">
+      <h2>Ver un colegio</h2>
+      <label for="nombreVer">Nombre:</label>
+      <input type="text" id="nombreVer" placeholder="Nombre del colegio" />
+      <button onclick="verColegio()">Ver colegio</button>
+      <p id="mostrarcolegio"></p>
+    </section>
+    <section id="modificar">
+      <h2>Modificar un colegio</h2>
+      <label for="nombreMod">Nombre:</label>
+      <input type="text" id="nombreMod" placeholder="Nombre del colegio" />
+      <select id="campoMod">
+        <option value="alumnos">Alumnos</option>
+        <option value="profesores">Profesores</option>
+        <option value="patio">Patio</option>
+      </select>
+      <label for="valorMod">Valor nuevo:</label>
+      <input type="number" id="valorMod" placeholder="Valor nuevo" />
+      <button onclick="modificarColegio()">Modificar colegio</button>
+    </section>
+    <section id="eliminar">
+      <h2>Eliminar un colegio</h2>
+      <label for="nombreBaja">Nombre:</label>
+      <input type="text" id="nombreBaja" placeholder="Nombre" />
+      <button onclick="eliminarColegio()">Eliminar colegio</button>
+    </section>
+    <section id="mostrar">
+      <h2>Mostrar todos los colegios</h2>
+      <button onclick="mostrarTodos()">Mostrar</button>
+      <p id="mostrarTodos"></p>
+    </section>
+    <script src="8.2.1-Colegio.js"></script>
+    <script src="coleg-funciones.js"></script>
+  </body>
+</html>

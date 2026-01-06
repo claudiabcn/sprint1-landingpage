@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Validar pasajeros" onclick="main()" />
+    <p id="show"></p>
+
+    <script>
+      function main() {
+        const edades = [19, 16, 20, 95, 99, 88, 97];
+        let mensaje = "";
+
+        for (let i = 0; i < edades.length; i++) {
+          if (edades[i] >= 18 && edades[i] <= 120) {
+            mensaje += "El pasajero " + (i + 1) + " puede embarcar." + "<br>";
+          } else if (edades[i] < 18 && edades[i] > 0) {
+            mensaje +=
+              "El pasajero " + (i + 1) + " no puede embarcar." + "<br>";
+          } else {
+            mensaje +=
+              "El pasajero " + (i + 1) + " no tiene una edad válida." + "<br>";
+          }
+        }
+        document.getElementById("show").innerHTML = mensaje;
+      }
+    </script>
+  </body>
+</html>
+Una companyia de viatges vol automatitzar el procés de validació d’edat dels
+passatgers abans d’embarcar. Només poden embarcar les persones que tinguin 18
+anys o més. Tens disponible un array amb les edats dels diferents passatgers.
+Escriu un programa en JavaScript que: Recorri l’array d’edats. Per a cada
+passatger, comprovi si pot embarcar. Mostri per consola un missatge per cada
+passatger seguint aquest format: Si pot embarcar: Passatger X : embarqui. Si no
+pot embarcar: Passatger X : no pot embarcar. On X és el número de passatger
+(començant des de 1). const edades = [19, 16, 20, 95, 99, 88, 97];

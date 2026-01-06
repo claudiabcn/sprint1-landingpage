@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="marca" placeholder="Marca" />
+    <input type="text" id="modelo" placeholder="Modelo" />
+    <input type="number" id="potencia" placeholder="Potencia" />
+    <input type="number" id="cilindrada" placeholder="Cilindrada" />
+    <input type="text" id="color" placeholder="Color" />
+    <p id="mostrar"></p>
+    <p id="mostrarDatos"></p>
+    <p id="arranca"></p>
+    <input type="button" value="Aceptar" onclick="main()" />
+
+    <script>
+      const coches = [];
+
+      function main() {
+        let marca = document.getElementById("marca").value;
+        let modelo = document.getElementById("modelo").value;
+        let potencia = parseInt(document.getElementById("potencia").value);
+        let cilindrada = parseInt(document.getElementById("cilindrada").value);
+        let color = document.getElementById("color").value;
+
+        let coche = new Coche(marca, modelo, potencia, cilindrada, color);
+
+        coches.push(coche);
+
+        coche.potencia = 100;
+
+        document.getElementById("mostrar").innerHTML = coche.toString();
+        document.getElementById("arranca").innerHTML = coche.arrancar();
+      }
+    </script>
+    <script src="8.0- Coche.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimento Input</title>
+</head>
+<body>
+    <h1>Experimento con Input</h1>
+    
+    <input type="text" id="miInput" placeholder="Escribe algo aquí">
+    <button id="miBoton">Ver qué escribí</button>
+    <button id="btn"> Soy un botón</button>
+    
+    <p id="resultado"></p>
+
+    <form id="miFormulario">
+    <input type="text" id="nombre" placeholder="Tu nombre" required>
+    <input type="email" id="email" placeholder="Tu email" required>
+    <button type="submit">Enviar</button>
+</form>
+<p id="mensaje"></p>
+
+    <script>
+        const boton = document.getElementById('btn');
+        function mostrarMensaje() {
+            alert("Botón presionado");
+        }
+        boton.addEventListener('click', mostrarMensaje);
+        
+        const  entrada = document.getElementById('miInput');
+        function informar(evento) {console.log(evento); }
+        entrada.addEventListener('input', informar);
+
+// Seleccionar el formulario
+// Crear una función que:
+
+// Reciba el evento
+// Evite el comportamiento por defecto
+// Muestre en consola: "Formulario interceptado"
+// (Bonus: muestra los valores del nombre y email)
+
+// Añadir el listener al formulario con el evento 'submit'
+
+const form=document.getElementById('miFormulario');
+function evitarEnvio(evento){
+    evento.preventDefault();
+    console.log("Formulario interceptado: "+ evento.target.nombre.value + ", " + evento.target.email.value);
+}
+   form.addEventListener('submit', evitarEnvio);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      value="Pon bien el array"
+      onclick="mostrarResultado()"
+    />
+    <p id="mostrar"></p>
+
+    <script>
+      function union() {
+        let arr1 = [1, 1, 2, 3];
+        let arr2 = [5, 4, 1, 5, 2];
+        let result = [];
+
+        for (let i = 0; i < arr1.length; i++) {
+          let j = 0;
+          let exists = false;
+
+          while (!exists && j < result.length) {
+            if (result[j] === arr1[i]) {
+              exists = true;
+            }
+            j++;
+          }
+
+          if (!exists) {
+            result.push(arr1[i]);
+          }
+        }
+
+        for (let i = 0; i < arr2.length; i++) {
+          let j = 0;
+          let exists = false;
+
+          while (!exists && j < result.length) {
+            if (result[j] === arr2[i]) {
+              exists = true;
+            }
+            j++;
+          }
+
+          if (!exists) {
+            result.push(arr2[i]);
+          }
+        }
+        return result;
+      }
+      function mostrarResultado() {
+        let resultado = union();
+        console.log(resultado);
+        document.getElementById("mostrar").innerHTML = resultado;
+      }
+    </script>
+  </body>
+</html>
+
+Una función recibe por parámetro dos arrays con números por ejemplo estos dos:
+[1, 1, 2, 3] [3, 4, 5] La función tiene que devolver un array con los números de
+los dos arrays recibidos, sin duplicados en el ejemplo debería devolver: [1, 2,
+3, 4, 5]

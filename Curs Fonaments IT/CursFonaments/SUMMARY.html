@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="button" value="Pon tus datos" onclick="mostrarDatos()" />
+
+    <input type="number" id="n1" placeholder="Put a number" />
+    <input type="text" id="t1" />
+
+    <p id="mostrar"></p>
+
+    <script>
+
+            //VARIABLES Y PROMPT
+            function mostrarDatos() {
+
+            let name = prompt("Escribe un nombre");
+            let nota1 = parseInt(prompt("Escribe un número"))
+
+            let num1 = parseInt(document.getElementById('n1').value)
+            let text1 = document.getElementById('t1').value
+
+            document.getElementById("mostrar").innerHTML = "El nombre es: " + name + " y el número es: " + num1;
+            console.log("El nombre es: " + name + " y el número es: " + num1);
+            alert("El nombre es: " + name + " y el número es: " + num1);
+
+        // iSNaN
+            let base;
+            do {
+            base =parseInt(prompt("Introdueix la base"));
+            } while (isNaN(base));
+
+      //Aleatorio 0  a   10
+      let numeroAleatori= Math.ceil(Math.random() * 10)
+
+              // FuncionRecogerNumero
+            function recogerNumber (){
+            let number;
+            do {
+                number =parseInt(prompt("Introdueix el número"));
+            } while (isNaN(number));
+            return number}
+
+                //CONDICIONALES
+                    if (cond1 < 3 && cond2 < 2) {
+                        mensaje = "Guay"
+                        }
+                        else if () {}
+                        else { }
+                //SWITCH
+                        switch (month) {
+                        case 1:
+                            if (cond1 < 3 && cond2 < 2) {
+                                mensjaje = "Guay"
+                        }
+                            else if () { }
+                                else { }
+                                break;
+
+                        case 2:
+                            if (cond1 < 5 && cond2 < 3) {
+                                    mensjaje = "Guayisim"
+                                }
+                            else if () { }
+                                else { }
+                                break;
+                        }
+                 //ARRAY Y FOR
+                            const words = []
+
+                            for (let i = 0; i < number; i++) {
+                                let word = prompt("Insert word " + (i + 1));
+                                words.push(word);
+                                words.pop(word);
+                            }
+
+                            for (let i = 0; i < words.length; i++) {
+                                shownwords = shownwords + words[i] + ", ";
+                            }
+                // FOR + IF
+                            let allsum = 0
+
+                            if (n1 > n2) {
+                                for (let i = n2; i < (n1 + 1); i++) {
+                                    allsum = i + allsum
+                                }
+                            }
+
+                //WHILE
+                            let a = Math.ceil((Math.random() * 10));
+                            let b = parseInt(document.getElementById('b1').value);
+                            while (a !== b) {
+                                b = parseInt(prompt("torna-hi"));
+                            }
+                            document.getElementById('s').innerHTML = "Has acertat, és el " + a
+
+                //DO Y WHILE
+                            do {
+                                b = parseInt(prompt("torna-hi"));
+                                trials = trials + 1;
+                            }
+                            while (a !== b && trials < 6);
+                            if (a !== b) {
+                                alert("Has superat els 5 intents")
+                            }
+                            else {
+                                document.getElementById('s').innerHTML = "Has acertat, és el " + a + " i ho has fet amb " + trials + " intents."
+                            }
+                        }
+                 //FOR ANIDADO
+                        let word = "*";
+                        let size = parseInt(document.getElementById("size").value);
+                        let resultado = document.getElementById("resultado");
+                        let tabla = "";
+                        for (let i = 0; i < size; i++) {
+                        for (let j = 0; j < size - i; j++) {
+                            tabla += word;
+                        }
+                        tabla += "<br>";
+                        }
+                        resultado.innerHTML = tabla;
+    </script>
+  </body>
+</html>

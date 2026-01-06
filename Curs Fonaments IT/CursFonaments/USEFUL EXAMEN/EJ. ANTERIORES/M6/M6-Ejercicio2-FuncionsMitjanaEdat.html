@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    </head>
+
+    <body>
+    <p id="s"></p>
+    <input type="number" id="personas" />
+    <input
+    type="button"
+    value="Calcular la mediana de edades de persones"
+    onclick="CalcularMediana()"
+    />
+    <script>
+    function CalcularMediana() {
+        let personas = document.getElementById("personas").value;
+        let sumaEdades = recogerEdades(personas);
+        let media = calcularMedia3(sumaEdades, personas);
+
+        document.getElementById("s").innerHTML = media;
+    }
+
+    function recogerEdades (personas) {
+        let i = 0;
+        let edad;
+        let sumaEdades = 0;
+        do {
+        edad = parseInt(prompt("Introduzca la edad" + (i + 1)));
+        if (edad > 0 && edad <= 120) {
+            sumaEdades += edad;
+            i++;  } else {
+            alert("Las edades deben ser entre 0 y 120"); }
+        } while (i < personas);
+        return sumaEdades;
+        }
+
+        function calcularMedia3(sumaEdades, personas) {
+        return sumaEdades / personas;
+        }
+    </script>
+    </body>
+</html>

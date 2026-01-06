@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="s"></p>
+    <input type="button" value="Introduir el número" onclick="calculParell()" />
+    <input type="number" id="n1" />
+    <script>
+      function calculParell() {
+        let missatge;
+        let n1 = parseInt(document.getElementById("n1").value);
+
+        if (n1 % 2 == 0) {
+          missatge = "Es parell";
+        } else {
+          missatge = "Es imparell";
+        }
+        document.getElementById("s").innerHTML = missatge;
+      }
+    </script>
+  </body>
+</html>
+<br /><br />
+L’usuari/ària ha d'introduir un número i el programa ha de mostrar per pantalla
+si el número és parell o imparell.

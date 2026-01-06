@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Inserta el número" id="n1" />
+    <input type="button" value="Click" onclick="main()" />
+
+    <p id="show"></p>
+
+    <script>
+      function main() {
+        let number = parseInt(document.getElementById("n1").value);
+        const numeritos = [];
+        const sumaTotalNumeros = [];
+        if (isNaN(number) || number <= 0) {
+          alert("Introduce un número válido");
+        } else {
+          for (let i = 0; i < number; i++) {
+            let numerito = parseInt(prompt("Inserta el número: " + (i + 1)));
+            numeritos.push(numerito);
+          }
+        }
+        for (let i = 0; i < number - 1; i++) {
+          sumaTotalNumeros.push(numeritos[i] + numeritos[i + 1]);
+        }
+        let maxi = calcularMax(sumaTotalNumeros);
+      }
+      function calcularMax(sumaTotalNumeros) {
+        let numeroMax = sumaTotalNumeros[0];
+        for (let i = 0; i < sumaTotalNumeros.length - 1; i++) {
+          if (sumaTotalNumeros[i + 1] >= numeroMax) {
+            numeroMax = sumaTotalNumeros[i + 1];
+          }
+        }
+        document.getElementById("show").innerHTML = numeroMax;
+        return numeroMax;
+      }
+    </script>
+  </body>
+</html>
+
+Crea un programa on l'usuari ha de dir quants números vol introduïr. Llavors
+l'usuari introdueix tots els números mitjançant prompts. Crea un mètode que reb
+els nombres per paràmetre i retorna la suma més gran de dos nombres correlatius.
+Per exemple: [5, 3, 2, 8, 1, 6, 5], en aquest cas retornaria 11

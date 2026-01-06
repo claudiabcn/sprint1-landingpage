@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestió de F1</title>
+  </head>
+  <body>
+    <h1>Gestió de treballadors</h1>
+
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" placeholder="Nom" />
+    <label for="cognom">Cognom:</label>
+    <input type="text" id="cognom" placeholder="Cognom" />
+    <label for="edat">Edat:</label>
+    <input type="number" id="edat" placeholder="Edat" />
+    <label for="antiguitat">Antiguitat:</label>
+    <input type="number" id="antiguitat" placeholder="Antiguitat" />
+
+    <label for="nomesc">Escuderia:</label>
+    <select id="nomesc">
+      <option value="">-- Selecciona --</option>
+      <option value="Ferrari">Ferrari</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Red Bull">Red Bull</option>
+    </select>
+    <br />
+    <br />
+
+    <label for="tipus">Tipus:</label>
+    <select id="tipus">
+      <option value="">-- Selecciona --</option>
+      <option value="pilot">Pilot</option>
+      <option value="mecanic">Mecànic</option>
+    </select>
+    <br /><br />
+
+    <fieldset>
+      <legend>Si és Pilot:</legend>
+      <label>Alçada: <input type="number" id="altura" /></label><br />
+      <label> Pes: <input type="number" id="pes" /></label><br />
+    </fieldset>
+
+    <fieldset>
+      <legend>Si és mecànic</legend>
+      <label
+        ><input type="checkbox" id="esMecanic" /> Marca-ho si te estudis
+        superiors</label
+      >
+    </fieldset>
+    <br />
+
+    <button type="button" onclick="crearTreballador()">
+      Crear Treballador
+    </button>
+    <button type="button" onclick="mostrarTreballador()">
+      Mostrar Treballador
+    </button>
+    <button type="button" onclick="eliminarTreballador()">
+      Eliminar Treballador
+    </button>
+
+    <p id="mostrar"></p>
+
+    <h1>Gestió de escuderies</h1>
+    <label for="nomescInput">Nom escuderia:</label>
+    <input type="text" id="nomescInput" placeholder="Nom de l'escuderia" />
+
+    <button type="button" onclick="mostrarEscuderia()">
+      Mostrar escuderia
+    </button>
+
+    <p id="mostrarescuderiax"></p>
+
+    <h1>Gestió de bòlids</h1>
+    <button type="button" onclick="mostrarBolid()">Mostrar bòlids</button>
+
+    <p id="mostrartotscotxes"></p>
+
+    <script src="ClasesPilots.js"></script>
+    <script src="ClasesOthers.js"></script>
+    <script src="funcions-Pilots.js"></script>
+  </body>
+</html>

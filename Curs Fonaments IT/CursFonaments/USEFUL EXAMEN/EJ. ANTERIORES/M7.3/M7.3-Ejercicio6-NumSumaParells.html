@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Suma els parells" onclick="sumaParells()" />
+    <p id="mostrar"></p>
+    <script>
+      function sumaParells() {
+        const llista = [];
+        let parells = 0;
+        let imparells = 0;
+        for (let i = 0; i < 20; i++) {
+          let numeroAleatori = Math.ceil(Math.random() * 50);
+          llista.push(numeroAleatori);
+        }
+
+        for (let i = 0; i < 20; i++) {
+          if (llista[i] % 2 == 0) {
+            parells = parells + llista[i];
+          } else {
+            imparells = imparells + llista[i];
+          }
+        }
+
+        document.getElementById("mostrar").innerHTML =
+          "La suma dels parells es: " +
+          parells +
+          " i la suma dels imparells es: " +
+          imparells;
+      }
+    </script>
+  </body>
+</html>

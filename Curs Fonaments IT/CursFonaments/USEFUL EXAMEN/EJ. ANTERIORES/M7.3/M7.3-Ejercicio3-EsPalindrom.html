@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="word" placeholder="Introduce una palabra" />
+    <input type="button" value="Al revés" onclick="textoPalindrom()" />
+    <p id="show"></p>
+
+    <script>
+      function textoPalindrom() {
+        let palabrita = document.getElementById("word").value;
+        let resultado = palabrita.split(" ").join("").toLowerCase();
+        let palabritaReves = "";
+        for (let i = 0; i < resultado.length; i++) {
+          palabritaReves = resultado[i] + palabritaReves;
+        }
+
+        if (palabritaReves === resultado)
+          document.getElementById("show").innerHTML = "És palíndrom";
+        else {
+          document.getElementById("show").innerHTML = "No és palíndrom";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+La ruta nos aporto otro paso natural

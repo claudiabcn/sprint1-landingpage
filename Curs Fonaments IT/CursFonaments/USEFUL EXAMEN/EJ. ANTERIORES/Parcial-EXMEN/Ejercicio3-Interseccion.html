@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      value="Pon bien el array"
+      onclick="mostrarResultado()"
+    />
+    <p id="mostrar"></p>
+
+    <script>
+      function mostrarResultado() {
+        let resultado = interseccion();
+        document.getElementById("mostrar").innerHTML = resultado;
+      }
+
+      function interseccion() {
+        let arr1 = [5, 1, 2, 3, 6, 6, 4, 5];
+        let arr2 = [3, 4, 5, 6, 7];
+        let result = [];
+
+        for (let i = 0; i < arr1.length; i++) {
+          let j = 0;
+          let exists = false;
+          while (!exists && j < arr2.length) {
+            if (arr1[i] === arr2[j]) {
+              exists = true;
+            } //if not, exists is false and j++
+            j++;
+          }
+          if (exists) {
+            let repetida = false;
+            for (let k = 0; k < result.length; k++) {
+              if (result[k] === arr1[i]) {
+                repetida = true;
+              }
+            }
+            if (!repetida) {
+              result.push(arr1[i]);
+            }
+          }
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>
+
+Crea una función que reciba dos arrays por parámetro y devuelva un tercer array
+con los elementos comunes en los dos arrays sin duplicados. Ejemplo: recibe
+estos dos arrays [1, 2, 3, 3, 4, 5], [3, 4, 5, 6, 7] y devuelve este array: [3,
+4, 5]

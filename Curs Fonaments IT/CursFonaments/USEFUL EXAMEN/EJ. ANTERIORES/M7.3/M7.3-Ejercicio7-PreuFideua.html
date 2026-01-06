@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="personas" placeholder="Persones" />
+    <input type="number" id="pgambes" placeholder="Preu de les gambes per kg" />
+    <input
+      type="number"
+      id="pcalamars"
+      placeholder="Preu dels calamars per kg"
+    />
+    <input type="number" id="pfideus" placeholder="Preu dels fideus per kg" />
+    <input
+      type="button"
+      value="Calcular preu de la fideuà"
+      onclick="missatge()"
+    />
+    <p id="show"></p>
+
+    <script>
+      function missatge() {
+        const persones = parseInt(document.getElementById("personas").value);
+        if (persones <= 0 || isNaN(persones)) {
+          alert("Escribe un número de personas válido");
+
+          return;
+        }
+
+        document.getElementById(
+          "show"
+        ).innerHTML = `La fideuà valdrà ${calculPreuFideua(persones).toFixed(
+          2
+        )} euros
+        i es necessitaràn ${calculFideus(persones).toFixed(2)} kilos de fideus,
+        ${calculCalamars(persones).toFixed(2)} kilos de calamars i
+        ${calculGambes(persones).toFixed(2)} kilos de gambes.
+        El preu per persona serà  ${calculPreuPersona(persones).toFixed(
+          2
+        )} euros.`;
+      }
+
+      function calculPreuPersona(persones) {
+        let preuPersonal = calculPreuFideua(persones) / persones;
+        return preuPersonal;
+      }
+
+      function calculPreuFideua(persones) {
+        let preuFideus = parseFloat(document.getElementById("pfideus").value);
+        if (preuFideus <= 0 || isNaN(preuFideus)) {
+          alert("Escribe un precio de fideos válido");
+          return;
+        }
+        let preuCalamars = parseFloat(
+          document.getElementById("pcalamars").value
+        );
+        if (preuCalamars <= 0 || isNaN(preuCalamars)) {
+          alert("Escribe un precio de calamares válido");
+          return;
+        }
+        let preuGambes = parseFloat(document.getElementById("pgambes").value);
+        if (preuGambes <= 0 || isNaN(preuGambes)) {
+          alert("Escribe un precio de gambas válido");
+          return;
+        }
+        let preuFideua =
+          preuFideus * calculFideus(persones) +
+          preuCalamars * calculCalamars(persones) +
+          preuGambes * calculGambes(persones);
+
+        return preuFideua;
+      }
+
+      function calculFideus(persones) {
+        const FIDEUSPPERSONA = 0.125;
+        let quantitatFideus = FIDEUSPPERSONA * persones;
+        return quantitatFideus;
+      }
+      function calculCalamars(persones) {
+        const CALAMARSPPERSONA = 0.1;
+        let quantitatCalamars = CALAMARSPPERSONA * persones;
+        return quantitatCalamars;
+      }
+      function calculGambes(persones) {
+        const GAMBESPPERSONA = 0.05;
+        let quantitatGambes = GAMBESPPERSONA * persones;
+        return quantitatGambes;
+      }
+    </script>
+  </body>
+</html>
+
+Un grup d’amics ha quedat per fer una fideuà. Els ingredients principals seran:
+fideus, gambes, i calamars. Saben que per cada quatre persones han d’utilitzar
+mig quilo de fideus, 400 grams de calamars i 200 grams de gambes. S’ha de fer un
+programa que demani per pantalla el preu per quilo de cada ingredient i el
+nombre d’amics que seran per dinar. El programa ha de calcular les quantitats
+necessàries de cada ingredient, el preu per persona i el preu final de la
+fideuà.

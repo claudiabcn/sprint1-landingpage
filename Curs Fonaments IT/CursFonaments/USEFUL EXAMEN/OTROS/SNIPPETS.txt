@@ -1,0 +1,819 @@
+{
+	"Console log": {
+		"prefix": "cl",
+		"body": "console.log($1);",
+		"description": "Quick console.log statement"
+	},
+	"Console Log Variable": {
+		"prefix": "clv",
+		"body": [
+			"console.log('$1:', $1);",
+			"$2"
+		],
+		"description": "Log a variable with its name as label for debugging"
+	},
+	"Console Log Object": {
+		"prefix": "clo",
+		"body": [
+			"console.log('${1:object} :>> ', ${1:object});",
+			"$0"
+		],
+		"description": "Log an object with enhanced visibility using :>> separator"
+	},
+	"Console Assert": {
+		"prefix": "cas",
+		"body": [
+			"console.assert(${1:expression}, ${2:object});",
+			"$0"
+		],
+		"description": "Assert that an expression is true, otherwise log error with stack trace"
+	},
+	"Console Clear": {
+		"prefix": "ccl",
+		"body": [
+			"console.clear();",
+			"$0"
+		],
+		"description": "Clear all console output"
+	},
+	"Console Count": {
+		"prefix": "cco",
+		"body": [
+			"console.count(${1:label});",
+			"$0"
+		],
+		"description": "Count how many times this line has been called with the same label"
+	},
+	"Console Debug": {
+		"prefix": "cdb",
+		"body": [
+			"console.debug(${1:object});",
+			"$0"
+		],
+		"description": "Log debug-level message (may be filtered in production)"
+	},
+	"Console Dir": {
+		"prefix": "cdi",
+		"body": [
+			"console.dir(${1:object});",
+			"$0"
+		],
+		"description": "Display interactive list of object properties"
+	},
+	"Console Error": {
+		"prefix": "cer",
+		"body": [
+			"console.error(${1:object});",
+			"$0"
+		],
+		"description": "Log error message with stack trace"
+	},
+	"Console Group": {
+		"prefix": "cgr",
+		"body": [
+			"console.group('${1:label}');",
+			"$0"
+		],
+		"description": "Start a collapsible group of console messages"
+	},
+	"Console Group End": {
+		"prefix": "cge",
+		"body": [
+			"console.groupEnd();",
+			"$0"
+		],
+		"description": "End the current console group"
+	},
+	"Console Info": {
+		"prefix": "cin",
+		"body": [
+			"console.info(${1:object});",
+			"$0"
+		],
+		"description": "Log informational message (may show info icon)"
+	},
+	"Console Table": {
+		"prefix": "clt",
+		"body": [
+			"console.table(${1:object});",
+			"$0"
+		],
+		"description": "Display array or object data in a table format"
+	},
+	"Console Time": {
+		"prefix": "cti",
+		"body": [
+			"console.time('${1:label}');",
+			"$0"
+		],
+		"description": "Start a timer with a specific label"
+	},
+	"Console Time End": {
+		"prefix": "cte",
+		"body": [
+			"console.timeEnd('${1:label}');",
+			"$0"
+		],
+		"description": "Stop timer and log elapsed time in milliseconds"
+	},
+	"Console Trace": {
+		"prefix": "ctr",
+		"body": [
+			"console.trace(${1:object});",
+			"$0"
+		],
+		"description": "Log a stack trace showing the call path"
+	},
+	"Console Warn": {
+		"prefix": "cwa",
+		"body": [
+			"console.warn(${1:object});",
+			"$0"
+		],
+		"description": "Log warning message (typically shows yellow icon)"
+	},
+
+	"Function Declaration": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:functionName}(${2:parameters}) {",
+			"  ${3:// function body}",
+			"}",
+			"$0"
+		],
+		"description": "Traditional function declaration"
+	},
+	"Arrow Function": {
+		"prefix": "af",
+		"body": [
+			"const ${1:functionName} = (${2:parameters}) => {",
+			"  ${3:// function body}",
+			"  return ${4:result};",
+			"};",
+			"$0"
+		],
+		"description": "ES6 arrow function with explicit return"
+	},
+
+	"If Statement": {
+		"prefix": "ifx",
+		"body": [
+			"if (${1:condition}) {",
+			"  ${2:// code to execute if true}",
+			"}",
+			"$0"
+		],
+		"description": "Basic if conditional statement"
+	},
+	"If-Else Statement": {
+		"prefix": "ifelse",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${2:// code if true}",
+			"} else {",
+			"\t${3:// code if false}",
+			"}",
+			"$0"
+		],
+		"description": "If-else conditional statement"
+	},
+
+	"For Loop": {
+		"prefix": "for_l",
+		"body": [
+			"for (let ${1:i} = ${2:0}; ${1:i} < ${3:array.length}; ${1:i}++) {",
+			"  ${4:// code to execute}",
+			"}",
+			"$0"
+		],
+		"description": "Traditional for loop with increment"
+	},
+	"For Loop Decrement": {
+		"prefix": "for_d",
+		"body": [
+			"for (let ${1:i} = ${2:array}.length - 1; ${1:i} >= 0; ${1:i}--) {",
+			"\t${3:// code to execute}",
+			"}"
+		],
+		"description": "Reverse for loop (iterates backwards)"
+	},
+	"For Of Loop": {
+		"prefix": "fof",
+		"body": [
+			"for (const ${1:item} of ${2:iterable}) {",
+			"\t${3:// code to execute}",
+			"}"
+		],
+		"description": "ES6 for...of loop for iterating values"
+	},
+	"For In Loop": {
+	"prefix": "fin",
+	"body": [
+		"for (let ${1:key} in ${2:object}) {",
+		"  ${3:// code to execute}",
+		"}",
+		"$0"
+	],
+	"description": "For...in loop to iterate over object properties"
+},
+	"For In Loop with hasOwnProperty": {
+		"prefix": "fin_h",
+		"body": [
+			"for (const ${1:key} in ${2:object}) {",
+			"\tif (${2:object}.hasOwnProperty(${1:key})) {",
+			"\t\t${3:// code to execute}",
+			"\t}",
+			"}"
+		],
+		"description": "For...in loop for object properties with hasOwnProperty check"
+	},
+
+	"Array Declaration": {
+		"prefix": "arr",
+		"body": [
+			"const ${1:array} = [${2}];$0"
+		],
+		"description": "Create a new array literal"
+	},
+	"Array Map Method": {
+		"prefix": "map",
+		"body": [
+			"${1:array}.map((${2:item}) => {",
+			"\t${3:// transform the item}",
+			"\treturn ${4:result};",
+			"});",
+			"$0"
+		],
+		"description": "Transform each array element and return new array"
+	},
+	"Array forEach": {
+		"prefix": "fre",
+		"body": [
+			"${1:array}.forEach((${2:item}, ${3:index}) => {",
+			"  ${4:// code to execute}",
+			"});",
+			"$0"
+		],
+		"description": "Execute function for each array element (no return value)"
+	},
+	"Array filter": {
+		"prefix": "filter",
+		"body": [
+			"const ${1:result} = ${2:array}.filter((${3:item}, ${4:index}) => {",
+			"\treturn ${5:item > 0};",
+			"});$0"
+		],
+		"description": "Create new array with elements that pass the test"
+	},
+	"Array find": {
+		"prefix": "find",
+		"body": [
+			"const ${1:item} = ${2:array}.find((${3:item}) => {",
+			"\treturn ${4:item.id === 1};",
+			"});$0"
+		],
+		"description": "Find first element that satisfies the condition"
+	},
+	"Array reduce": {
+		"prefix": "reduce",
+		"body": [
+			"const ${1:result} = ${2:array}.reduce((${3:acc}, ${4:el}) => {",
+			"\treturn ${3:acc} + ${4:el};",
+			"}, ${5:initialValue});$0"
+		],
+		"description": "Reduce array to single value using accumulator"
+	},
+	"Array sort": {
+		"prefix": "sort",
+		"body": [
+			"${1:array}.sort((a, b) => {",
+			"\treturn ${2:a - b};",
+			"});$0"
+		],
+		"description": "Sort array in place (modifies original array)"
+	},
+	"Array includes": {
+		"prefix": "includes",
+		"body": [
+			"const ${1:hasItem} = ${2:array}.includes(${3:item});$0"
+		],
+		"description": "Check if array contains a specific value"
+	},
+	"Array join": {
+		"prefix": "join",
+		"body": [
+			"const ${1:string} = ${2:array}.join('${3:,}');$0"
+		],
+		"description": "Join array elements into a string with separator"
+	},
+
+	"Basic Object": {
+		"prefix": "obj",
+		"body": [
+			"const ${1:objectName} = {",
+			"\t${2:key}: ${3:value},",
+			"\t${4:key2}: ${5:value2}",
+			"};"
+		],
+		"description": "Create object literal with properties"
+	},
+	"Object with Method": {
+		"prefix": "method_obj",
+		"body": [
+			"const ${1:objectName} = {",
+			"\t${2:key}: ${3:value},",
+			"\t${4:methodName}: function() {",
+			"\t\t${5:// code here}",
+			"\t}",
+			"};"
+		],
+		"description": "Object with traditional function method"
+	},
+	"Object with Arrow Method": {
+		"prefix": "arrow_obj",
+		"body": [
+			"const ${1:objectName} = {",
+			"\t${2:key}: ${3:value},",
+			"\t${4:methodName}: () => {",
+			"\t\t${5:// code here}",
+			"\t}",
+			"};"
+		],
+		"description": "Object with arrow function method (no 'this' binding)"
+	},
+	"Object Assign": {
+		"prefix": "assign_obj",
+		"body": [
+			"const ${1:newObject} = Object.assign({}, ${2:targetObject}, ${3:sourceObject});"
+		],
+		"description": "Shallow copy/merge objects (target is first empty object)"
+	},
+	"Object Keys": {
+		"prefix": "keys_obj",
+		"body": [
+			"const ${1:keysArray} = Object.keys(${2:objectName});"
+		],
+		"description": "Get array of object's own property names"
+	},
+	"Object Values": {
+		"prefix": "values_obj",
+		"body": [
+			"const ${1:valuesArray} = Object.values(${2:objectName});"
+		],
+		"description": "Get array of object's own property values"
+	},
+	"Object Entries": {
+		"prefix": "entries_obj",
+		"body": [
+			"const ${1:entriesArray} = Object.entries(${2:objectName});"
+		],
+		"description": "Get array of [key, value] pairs"
+	},
+	"Object GroupBy": {
+		"prefix": "groupby_obj",
+		"body": [
+			"// Group array of objects by a property",
+			"const ${1:groupedData} = Object.groupBy(${2:array}, (${3:item}) => {",
+			"\treturn ${3:item}.${4:property};",
+			"});",
+			"$0"
+		],
+		"description": "Group array items by property value (ES2024)"
+	},
+
+	"Class Declaration": {
+		"prefix": "class_dec",
+		"body": [
+			"class ${1:ClassName} {",
+			"  constructor(${2:parameters}) {",
+			"    ${3:// initialization code}",
+			"  }",
+			"  ",
+			"  ${4:methodName}() {",
+			"    ${5:// method code}",
+			"  }",
+			"}",
+			"$0"
+		],
+		"description": "ES6 class with constructor and method"
+	},
+	"Class to Object": {
+		"prefix": "class_obj",
+		"body": [
+			"class ${1:ClassName} {",
+			"\tconstructor(${2:parameters}) {",
+			"\t\tthis.${3:property} = ${4:value};",
+			"\t}",
+			"\t",
+			"\t${5:methodName}() {",
+			"\t\t${6:// method code}",
+			"\t}",
+			"}",
+			"",
+			"const ${7:objectName} = new ${1:ClassName}(${8:arguments});"
+		],
+		"description": "Class definition with instantiation example"
+	},
+	"Class Inheritance": {
+		"prefix": "class_inh",
+		"body": [
+			"class ${1:ParentClass} {",
+			"\tconstructor(${2:parameters}) {",
+			"\t\tthis.${3:property} = ${4:value};",
+			"\t}",
+			"\t",
+			"\t${5:parentMethod}() {",
+			"\t\t${6:// parent method code}",
+			"\t}",
+			"}",
+			"",
+			"class ${7:ChildClass} extends ${1:ParentClass} {",
+			"\tconstructor(${8:childParameters}) {",
+			"\t\tsuper(${9:parentParameters});",
+			"\t\tthis.${10:childProperty} = ${11:childValue};",
+			"\t}",
+			"\t",
+			"\t${12:childMethod}() {",
+			"\t\t${13:// child method code}",
+			"\t}",
+			"}"
+		],
+		"description": "Parent and child class with inheritance using extends"
+	},
+	"Static Methods": {
+		"prefix": "static_method",
+		"body": [
+			"class ${1:ClassName} {",
+			"\tconstructor(${2:parameters}) {",
+			"\t\tthis.${3:property} = ${4:value};",
+			"\t}",
+			"\t",
+			"\t// Instance method",
+			"\t${5:instanceMethod}() {",
+			"\t\t${6:// instance method code}",
+			"\t}",
+			"\t",
+			"\t// Static method",
+			"\tstatic ${7:staticMethod}(${8:parameters}) {",
+			"\t\t${9:// static method code}",
+			"\t\treturn ${10:result};",
+			"\t}",
+			"}",
+			"",
+			"// Call static method without instantiating",
+			"const ${11:result} = ${1:ClassName}.${7:staticMethod}(${12:arguments});"
+		],
+		"description": "Class with instance and static methods"
+	},
+	"Getters and Setters": {
+		"prefix": "get_set",
+		"body": [
+			"class ${1:ClassName} {",
+			"\tconstructor(${2:initialValue}) {",
+			"\t\tthis._${3:property} = ${2:initialValue};",
+			"\t}",
+			"\t",
+			"\t// Getter",
+			"\tget ${3:property}() {",
+			"\t\treturn this._${3:property};",
+			"\t}",
+			"\t",
+			"\t// Setter",
+			"\tset ${3:property}(${4:newValue}) {",
+			"\t\t${5:// Optional validation}",
+			"\t\tthis._${3:property} = ${4:newValue};",
+			"\t}",
+			"}",
+			"",
+			"const ${6:instance} = new ${1:ClassName}(${7:value});",
+			"// Get property using getter",
+			"console.log(${6:instance}.${3:property});",
+			"// Set property using setter",
+			"${6:instance}.${3:property} = ${8:newValue};"
+		],
+		"description": "Class with getter and setter for property access control"
+	},
+	"Property Getter": {
+		"prefix": "get",
+		"body": [
+			"get ${1:propertyName}() {",
+			"\treturn this.${2:_property};",
+			"}",
+			"$0"
+		],
+		"description": "Getter method for computed property access"
+	},
+	"Property Setter": {
+		"prefix": "set",
+		"body": [
+			"set ${1:propertyName}(${2:value}) {",
+			"\t${3:// Optional validation}",
+			"\tthis.${4:_property} = ${2:value};",
+			"}",
+			"$0"
+		],
+		"description": "Setter method with optional validation"
+	},
+	"Private Class Fields": {
+		"prefix": "private_fields",
+		"body": [
+			"class ${1:ClassName} {",
+			"\t// Private fields with # prefix",
+			"\t#${2:privateField} = ${3:initialValue};",
+			"\t",
+			"\tconstructor(${4:parameters}) {",
+			"\t\tthis.${5:publicField} = ${6:value};",
+			"\t}",
+			"\t",
+			"\t${7:methodName}() {",
+			"\t\t// Private fields can only be accessed within the class",
+			"\t\tconsole.log('Private value:', this.#${2:privateField});",
+			"\t\tthis.#${8:privateMethod}();",
+			"\t}",
+			"\t",
+			"\t// Private method",
+			"\t#${8:privateMethod}() {",
+			"\t\tconsole.log('This is a private method');",
+			"\t}",
+			"}"
+		],
+		"description": "Class with private fields and methods using # syntax (ES2022+)"
+	},
+	"Super Method Call": {
+		"prefix": "supercall",
+		"body": [
+			"class ${1:ParentClass} {",
+			"\t${2:methodName}() {",
+			"\t\tconsole.log('Parent method');",
+			"\t\treturn '${3:parentResult}';",
+			"\t}",
+			"}",
+			"",
+			"class ${4:ChildClass} extends ${1:ParentClass} {",
+			"\t${2:methodName}() {",
+			"\t\t// Call parent's method first",
+			"\t\tconst ${5:parentResult} = super.${2:methodName}();",
+			"\t\tconsole.log('Child method extending parent behavior');",
+			"\t\tconsole.log('Got from parent:', ${5:parentResult});",
+			"\t\treturn '${6:childResult}';",
+			"\t}",
+			"}",
+			"$0"
+		],
+		"description": "Override parent method while calling super implementation"
+	},
+	"instanceof Operator": {
+		"prefix": "instanceof",
+		"body": [
+			"class ${1:ParentClass} {",
+			"\tconstructor() {",
+			"\t\tthis.${2:parentProperty} = ${3:parentValue};",
+			"\t}",
+			"}",
+			"",
+			"class ${4:ChildClass} extends ${1:ParentClass} {",
+			"\tconstructor() {",
+			"\t\tsuper();",
+			"\t\tthis.${5:childProperty} = ${6:childValue};",
+			"\t}",
+			"}",
+			"",
+			"// Create instances",
+			"const ${7:parentInstance} = new ${1:ParentClass}();",
+			"const ${8:childInstance} = new ${4:ChildClass}();",
+			"",
+			"// Check instance types",
+			"console.log(${8:childInstance} instanceof ${4:ChildClass}); // true",
+			"console.log(${8:childInstance} instanceof ${1:ParentClass}); // true",
+			"console.log(${7:parentInstance} instanceof ${4:ChildClass}); // false",
+			"",
+			"// Type checking function",
+			"function ${9:checkType}(obj) {",
+			"\tif (obj instanceof ${1:ParentClass}) {",
+			"\t\tconsole.log('Object is a ${1:ParentClass}');",
+			"\t\t",
+			"\t\tif (obj instanceof ${4:ChildClass}) {",
+			"\t\t\tconsole.log('Object is a ${4:ChildClass}');",
+			"\t\t}",
+			"\t} else {",
+			"\t\tconsole.log('Object is neither');",
+			"\t}",
+			"}",
+			"$0"
+		],
+		"description": "Check object inheritance chain with instanceof"
+	},
+	"Factory Function": {
+		"prefix": "factory_function",
+		"body": [
+			"// Factory function to create objects",
+			"function create${1:ObjectName}(${2:parameters}) {",
+			"\treturn {",
+			"\t\t${3:property}: ${4:value},",
+			"\t\t${5:method}() {",
+			"\t\t\t${6:// method implementation}",
+			"\t\t\treturn `${7:result}`;",
+			"\t\t}",
+			"\t};",
+			"}",
+			"",
+			"// Create objects using the factory",
+			"const ${8:instance1} = create${1:ObjectName}(${9:arguments1});",
+			"const ${10:instance2} = create${1:ObjectName}(${11:arguments2});"
+		],
+		"description": "Factory pattern for creating objects without 'new'"
+	},
+
+	"Import Module": {
+		"prefix": "imp",
+		"body": [
+			"import ${2:moduleName} from '${1:module}';",
+			"$0"
+		],
+		"description": "ES6 default import"
+	},
+	"Import Without Module Name": {
+		"prefix": "imn",
+		"body": [
+			"import '${1:module}';",
+			"$0"
+		],
+		"description": "Import for side effects only (no exports)"
+	},
+	"Import Destructuring": {
+		"prefix": "imd",
+		"body": [
+			"import { ${2:items} } from '${1:module}';",
+			"$0"
+		],
+		"description": "ES6 named imports with destructuring"
+	},
+	"Import Everything": {
+		"prefix": "ime",
+		"body": [
+			"import * as ${2:alias} from '${1:module}';",
+			"$0"
+		],
+		"description": "Import all exports as namespace object"
+	},
+	"Import As Alias": {
+		"prefix": "ima",
+		"body": [
+			"import { ${2:originalName} as ${3:alias} } from '${1:module}';",
+			"$0"
+		],
+		"description": "Import with renamed binding"
+	},
+	"Require Package": {
+		"prefix": "rqr",
+		"body": [
+			"require('${1:package}');",
+			"$0"
+		],
+		"description": "CommonJS require (Node.js)"
+	},
+	"Require to Const": {
+		"prefix": "req",
+		"body": [
+			"const ${1:packageName} = require('${1:package}');",
+			"$0"
+		],
+		"description": "CommonJS require with assignment"
+	},
+	"Module Exports": {
+		"prefix": "mde",
+		"body": [
+			"module.exports = {",
+			"\t${1:exportName}: ${2:exportValue},",
+			"\t$0",
+			"};"
+		],
+		"description": "CommonJS module.exports object"
+	},
+	"Export Named Variable": {
+		"prefix": "env",
+		"body": [
+			"export const ${1:exportVariable} = ${2:localVariable};",
+			"$0"
+		],
+		"description": "ES6 named export for constant"
+	},
+	"Export Named Function": {
+		"prefix": "enf",
+		"body": [
+			"export const ${1:functionName} = (${2:params}) => {",
+			"\t${3:// function body}",
+			"\treturn ${4:result};",
+			"};",
+			"$0"
+		],
+		"description": "ES6 named export for arrow function"
+	},
+	"Export Default Function": {
+		"prefix": "edf",
+		"body": [
+			"export default function ${1:functionName}(${2:params}) {",
+			"\t${3:// function body}",
+			"\treturn ${4:result};",
+			"}",
+			"$0"
+		],
+		"description": "ES6 default export function"
+	},
+	"Export Class": {
+		"prefix": "ecl",
+		"body": [
+			"export default class ${1:className} {",
+			"\tconstructor(${2:params}) {",
+			"\t\t${3:// constructor code}",
+			"\t}",
+			"\t$0",
+			"}"
+		],
+		"description": "ES6 default export class"
+	},
+	"Export Class Extends": {
+		"prefix": "ece",
+		"body": [
+			"export default class ${1:className} extends ${2:baseclassName} {",
+			"\tconstructor(${3:params}) {",
+			"\t\tsuper(${4:superParams});",
+			"\t\t${5:// constructor code}",
+			"\t}",
+			"\t$0",
+			"}"
+		],
+		"description": "ES6 default export class with inheritance"
+	},
+
+	"Destructure Object": {
+		"prefix": "dob",
+		"body": [
+			"const { ${2:propertyName} } = ${1:objectToDestruct};",
+			"$0"
+		],
+		"description": "Extract properties from object"
+	},
+	"Destructure Array": {
+		"prefix": "dar",
+		"body": [
+			"const [${2:propertyName}] = ${1:arrayToDestruct};",
+			"$0"
+		],
+		"description": "Extract elements from array"
+	},
+
+	"Promise": {
+		"prefix": "prom",
+		"body": [
+			"return new Promise((resolve, reject) => {",
+			"\t${1:// async operation}",
+			"\t// resolve(result) or reject(error)",
+			"});",
+			"$0"
+		],
+		"description": "Create a new Promise with resolve/reject"
+	},
+	"Then Catch": {
+		"prefix": "then_catch",
+		"body": [
+			".then((${1:result}) => {",
+			"\t${2:// handle success}",
+			"}).catch((${3:err}) => {",
+			"\t${4:// handle error}",
+			"});",
+			"$0"
+		],
+		"description": "Promise chain with error handling"
+	},
+	"Set Timeout": {
+		"prefix": "sto",
+		"body": [
+			"setTimeout(() => {",
+			"\t${2:// code to execute}",
+			"}, ${1:delayInms});",
+			"$0"
+		],
+		"description": "Execute code after delay in milliseconds"
+	},
+	"Set Interval": {
+		"prefix": "sti",
+		"body": [
+			"setInterval(() => {",
+			"\t${2:// code to execute}",
+			"}, ${1:intervalInms});",
+			"$0"
+		],
+		"description": "Execute code repeatedly at fixed intervals"
+	},
+	"Use Strict": {
+		"prefix": "use_strict",
+		"body": "'use strict';",
+		"description": "Add strict mode directive"
+	},
+	"Doc.GetElementbyID": {
+		"prefix": "doc_byID",
+		"body": "document.getElementById('')",
+		"description": "Get Element by ID"
+	},
+}

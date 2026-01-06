@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio - Gestión de Videojuego Multijugador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+
+    <h1>Gestión de Personajes en un Videojuego Online</h1>
+
+    <details>
+        <summary>cas</summary>
+        <p>En un videojuego multijugador, los jugadores pueden crear personajes que evolucionan con el tiempo. Cada personaje pertenece a una clase (por ejemplo, guerrero, mago, arquero) y puede aprender habilidades, subir de nivel, y recoger objetos.</p>
+
+        <p>Todos los personajes comparten características comunes: nombre, nivel, clase, habilidades y objetos equipados. Por tanto, se debe implementar una clase base <strong>Personaje</strong> de la cual heredarán las distintas clases específicas como <strong>Guerrero</strong>, <strong>Mago</strong> o <strong>Arquero</strong>.</p>
+
+        <p>Cada clase derivada podrá tener sus propias reglas o métodos específicos. Por ejemplo:</p>
+        <ul>
+            <li>Los <strong>guerreros</strong> pueden llevar armaduras pesadas y usar espadas.</li>
+            <li>Los <strong>magos</strong> pueden usar varitas mágicas y aprender hechizos exclusivos.</li>
+            <li>Los <strong>arqueros</strong> pueden atacar a distancia y tener mejor puntería.</li>
+        </ul>
+
+        <p>Cada personaje tiene un nombre, un nivel (de 1 a 100), una clase y una lista de habilidades. No puede aprender más de <strong>8 habilidades</strong>. Si quiere aprender una nueva y ya ha alcanzado el límite, deberá olvidar una.</p>
+
+        <p>Cada habilidad tiene un nombre y un nivel mínimo requerido para aprenderla. Un personaje <strong>no puede aprender habilidades por encima de su nivel actual</strong>.</p>
+
+        <p>Los objetos del juego pueden ser armas, armaduras o pociones. Cada objeto tiene un nombre, un tipo, y un nivel mínimo para poder ser usado. Algunos objetos solo pueden ser utilizados por una clase concreta. Un personaje solo puede llevar hasta <strong>5 objetos equipados</strong> al mismo tiempo.</p>
+
+        <p>Del personaje se debe saber: su nombre, clase, nivel, habilidades que conoce, habilidades olvidadas y los objetos equipados.</p>
+
+        <p>El sistema debe permitir:</p>
+        <ol>
+            <li>Crear personajes de distintas clases (utilizando herencia).</li>
+            <li>Implementar un método especifico para cada clase derivada</li>
+            <li>Mostrar todos los personajes creados.</li>
+            <li>Aprender una nueva habilidad (si cumple los requisitos).</li>
+            <li>Olvidar una habilidad.</li>
+            <li>Equipar un objeto (si cumple requisitos de clase y nivel, y no excede el límite).</li>
+            <li>Mostrar los objetos equipados de un personaje.</li>
+            <li>Subir de nivel a un personaje.</li>
+        </ol>
+    </details>
+
+    <details>
+        <summary>cat</summary>
+        <p>En un videojoc multijugador, els jugadors poden crear personatges que evolucionen amb el temps. Cada personatge pertany a una classe (per exemple, guerrer, mag, arquer) i pot aprendre habilitats, pujar de nivell i recollir objectes.</p>
+
+        <p>Tots els personatges comparteixen característiques comunes: nom, nivell, classe, habilitats i objectes equipats. Per tant, s'ha d'implementar una classe base anomenada <strong>Personatge</strong>, de la qual en derivaran les subclasses <strong>Guerrer</strong>, <strong>Mag</strong> i <strong>Arquer</strong>.</p>
+
+        <p>Cada subclasse pot tenir les seves pròpies regles i mètodes específics. Per exemple:</p>
+        <ul>
+            <li>Els <strong>guerrers</strong> poden portar armadures pesades i utilitzar espases.</li>
+            <li>Els <strong>mags</strong> poden fer servir varetes màgiques i aprendre encanteris exclusius.</li>
+            <li>Els <strong>arquers</strong> poden atacar a distància i tenir millor punteria.</li>
+        </ul>
+
+        <p>Cada personatge té un nom, un nivell (de 1 a 100), una classe i una llista d'habilitats. No pot aprendre més de <strong>8 habilitats</strong>. Si vol aprendre'n una de nova i ja ha assolit el límit, haurà d'oblidar-ne una.</p>
+
+        <p>Cada habilitat té un nom i un nivell mínim requerit per ser apresa. Un personatge <strong>no pot aprendre habilitats per sobre del seu nivell actual</strong>.</p>
+
+        <p>Els objectes del joc poden ser armes, armadures o pocions. Cada objecte té un nom, un tipus i un nivell mínim per poder ser utilitzat. Alguns objectes només poden ser utilitzats per una classe concreta. Un personatge només pot portar fins a <strong>5 objectes equipats</strong> alhora.</p>
+
+        <p>Del personatge cal saber: el seu nom, classe, nivell, habilitats que coneix, habilitats oblidades i els objectes equipats.</p>
+
+        <p>El sistema ha de permetre:</p>
+        <ol>
+            <li>Crear personatges de diferents classes (utilitzant herència).</li>
+            <li>Implementar un mètode especific per a cada classe derivada</li>
+            <li>Mostrar tots els personatges creats.</li>
+            <li>Aprendre una nova habilitat (si compleix els requisits).</li>
+            <li>Oblidar una habilitat.</li>
+            <li>Equipar un objecte (si compleix els requisits de classe i nivell, i no excedeix el límit).</li>
+            <li>Mostrar els objectes equipats d’un personatge.</li>
+            <li>Pujar de nivell un personatge.</li>
+        </ol>
+    </details>
+
+    </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ca">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Exercici: Sistema de Gestió d’una Clínica Veterinària</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" />
+	</head>
+	<body>
+		<div style="padding: 20px; margin: 20px">
+			<header
+				style="display: flex; flex-direction: column; align-items: center">
+				<h1>🧪 Exercici: Sistema de Gestió d’una Clínica Veterinària</h1>
+				<div class="minDiv">
+					<p>
+						En una clínica veterinària conviuen diferents tipus de
+						professionals, cadascun amb un paper fonamental en la cura dels
+						animals i la gestió del centre. La clínica ha de registrar totes les
+						persones que en formen part, permetent diferenciar-ne els rols i
+						capacitats.
+					</p>
+				</div>
+			</header>
+			<div>
+				<div class="button-container">
+					<a href="index.html" class="button button-cat btn-back">back</a>
+				</div>
+			</div>
+			<main>
+				<h2>1. Veterinaris</h2>
+				<p>
+					Els veterinaris juguen un paper crucial en el diagnòstic i tractament
+					dels animals. Per millorar la seva eficiència, poden aprendre
+					tècniques específiques que els permeten realitzar procediments
+					avançats. Tanmateix, cada veterinari només pot dominar un màxim de
+					<strong>5 capacitats</strong>. Si ja ha assolit aquest límit, haurà
+					d’oblidar una capacitat per poder aprendre’n una nova.
+				</p>
+
+				<p>
+					<strong>Recordatori:</strong> Un veterinari no pot aprendre una
+					tècnica que ja domina.
+				</p>
+
+				<p>Del veterinari es vol saber:</p>
+				<ul>
+					<li>DNI</li>
+					<li>Nom</li>
+					<li>Any de naixement</li>
+					<li>
+						L'hora exacta en generar el registre (<code>toLocaleString()</code
+						><small> => google it</small>)
+					</li>
+					<li>Especialitat (per exemple, cirurgia, dermatologia, etc.)</li>
+					<li>Capacitats clíniques actives (màx. 5)</li>
+					<li>Historial de capacitats prèvies</li>
+					<li>Llista d'intervencions en què ha participat</li>
+				</ul>
+
+				<p>
+					A més, per poder atendre casos clínics crítics, el veterinari ha de
+					tenir almenys <strong>3 anys d'experiència</strong>.
+				</p>
+
+				<h2>2. Auxiliars Veterinaris</h2>
+				<p>
+					Els auxiliars veterinaris duen a terme un paper clau en la cura diària
+					dels animals i l'assistència en cirurgies. Poden realitzar múltiples
+					tasques administratives i emmagatzemar-les dins del sistema,
+					contribuint així a l'eficiència del centre.
+				</p>
+
+				<p>Del auxiliar veterinari es vol saber:</p>
+				<ul>
+					<li>DNI</li>
+					<li>Nom</li>
+					<li>Data de naixement (dia, mes, any)</li>
+					<li>
+						L'hora exacta en generar el registre (<code>toLocaleString()</code>)
+					</li>
+					<li>Anys d’experiència</li>
+					<li>Registre de tasques realitzades</li>
+					<li>Llista d’animals atesos</li>
+				</ul>
+
+				<h2>3. Casos Clínics</h2>
+				<p>
+					Cada cas clínic té un identificador únic, un nom i un nivell de
+					complexitat, el qual determina quines tècniques calen per resoldre'l.
+					No tots els veterinaris podran participar-hi, i l’èxit de cada cas
+					dependrà de la preparació de l’equip i les tècniques que posseeixin.
+				</p>
+
+				<p>La complexitat dels casos va de <strong>0 a 5</strong>.</p>
+
+				<p>
+					Els veterinaris només poden treballar en casos clínics que tinguin una
+					complexitat inferior o igual al nombre de tècniques que dominen. Per
+					exemple, si un veterinari domina 3 tècniques, podrà participar en els
+					casos que tinguin una complexitat màxima de 3.
+				</p>
+
+				<h2>4. Instàncies i Base de Dades</h2>
+				<p>
+					Tot s’administrarà des d’una classe anomenada
+					<code>ClinicaVeterinaria</code>. Aquesta classe acollirà tant casos
+					com sanitaris.
+				</p>
+
+				<h2>5. Requisits de l’Aplicació</h2>
+				<p>
+					Es requereix una aplicació que permeti gestionar tot aquest sistema:
+				</p>
+				<ul>
+					<li>Donar d’alta veterinaris i auxiliars veterinaris.</li>
+					<li>
+						Mostrar el veterinari amb més edat (<code>.getFullYear()</code>).
+					</li>
+					<li>Mostrar el veterinari més jove (<code>.getFullYear()</code>).</li>
+					<li>Mostrar tots els veterinaris del sistema.</li>
+					<li>Mostrar les capacitats que domina un veterinari concret.</li>
+					<li>El veterinari ha de poder aprendre una nova capacitat.</li>
+					<li>
+						El veterinari ha de poder passar una capacitat de activa a
+						l'historial.
+					</li>
+					<li>Assignar un veterinari a un cas clínic que pugui resoldre.</li>
+					<li>Registrar tasques realitzades per un auxiliar veterinari.</li>
+					<li>Mostrar els casos clínics assignats a un veterinari.</li>
+				</ul>
+			</main>
+		</div>
+	</body>
+</html>

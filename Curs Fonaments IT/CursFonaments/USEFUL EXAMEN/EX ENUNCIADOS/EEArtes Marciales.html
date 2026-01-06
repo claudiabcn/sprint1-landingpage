@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de una Escuela de Artes Marciales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1828/1828778.png">
+
+</head>
+<body >
+    <div style="padding: 20px; margin: 20px;">
+
+    <header style="display: flex; flex-direction: column; align-items: center;">
+        <h1>Ejercicio: Sistema de Gestión de una Escuela de Artes Marciales</h1>
+        <p>En una escuela de artes marciales conviven diferentes tipos de personas, cada una con un papel fundamental en el desarrollo de las clases y la formación de los estudiantes.</p>
+    </header>
+    <div>
+        <div class="button-container">
+            <a href="index.html" class="button button-cas">back</a>
+        </div>
+    </div>
+
+    <main >
+        <section>
+            <h2>1. Instructores</h2>
+            <p>Los instructores son responsables de enseñar técnicas específicas a los estudiantes. Cada instructor puede dominar hasta 5 técnicas avanzadas. Si ya ha alcanzado este límite, deberá olvidar una técnica para aprender una nueva.</p>
+            <ul>
+                <li><strong>Recordatorio:</strong> Un instructor no puede aprender una técnica que ya domina.</li>
+                <li>De los instructores se quiere saber:
+                    <ul>
+                        <li>DNI</li>
+                        <li>Nombre</li>
+                        <li>Edad</li>
+                        <li>Estilo de arte marcial (por ejemplo, karate, judo, kung fu, etc.)</li>
+                        <li>Qué técnicas domina</li>
+                        <li>Qué técnicas ha olvidado</li>
+                        <li>Qué estudiantes ha entrenado</li>
+                    </ul>
+                </li>
+                <li>Para poder enseñar clases avanzadas, el instructor debe tener al menos 5 años de experiencia.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Estudiantes</h2>
+            <p>Los estudiantes aprenden técnicas básicas y avanzadas de los instructores. Pueden participar en torneos y recibir calificaciones basadas en su desempeño.</p>
+            <p>De los estudiantes se quiere saber:</p>
+            <ul>
+                <li>DNI</li>
+                <li>Nombre</li>
+                <li>Edad</li>
+                <li>Nivel (principiante, intermedio, avanzado)</li>
+                <li>Qué técnicas han aprendido</li>
+                <li>En qué torneos han participado</li>
+                <li>Su calificación promedio en torneos</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Torneos</h2>
+            <p>Cada torneo tiene un identificador único, un nombre y un nivel de dificultad, el cual determina qué técnicas se necesitan para competir. No todos los estudiantes podrán participar en todos los torneos, y el éxito de cada estudiante dependerá de su nivel y las técnicas que posean. La dificultad de los torneos va de 0 a 5.</p>
+            <p>Los estudiantes solo pueden participar en torneos que tengan una dificultad inferior o igual al número de técnicas que dominan. Por ejemplo, si un estudiante domina 3 técnicas, podrá participar en los torneos que tengan una dificultad máxima de 3.</p>
+        </section>
+
+        <section>
+            <h2>4. Requisitos del Sistema</h2>
+            <p>Se requiere una aplicación que permita gestionar todo este sistema:</p>
+            <ul>
+                <li>Dar de alta instructores y estudiantes.</li>
+                <li>Mostrar todos los instructores del sistema.</li>
+                <li>Mostrar las técnicas en general (sin duplicados) </li>
+                <li>Mostrar el instructor de un estudiante en concreto </li>
+                <li>Mostrar las técnicas que domina un instructor o estudiante en concreto.</li>
+                <li>El instructor tiene que poder aprender una nueva técnica.</li>
+                <li>El instructor tiene que poder olvidar una técnica.</li>
+                <li>Asignar un estudiante a un torneo que pueda competir.</li>
+                <li>Calcular la calificación promedio de un estudiante en torneos.</li>
+                <li>Implementar un método <code>entrenar()</code> que sea diferente para instructores y estudiantes </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="display: flex; flex-direction: column; align-items: center;">
+        <p>&copy; 2025 Sistema de Gestión de Escuelas de Artes Marciales</p>
+    </footer>
+    </div>
+
+</body>
+</html>

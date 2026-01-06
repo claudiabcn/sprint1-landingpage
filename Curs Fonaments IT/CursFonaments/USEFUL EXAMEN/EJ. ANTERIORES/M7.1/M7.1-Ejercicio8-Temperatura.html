@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="n1" />
+    <input type="button" value="Convertir a Fahrenheit" onclick="convertir()" />
+    <p id="result"></p>
+    <script>
+      function convertir() {
+        const K = 32;
+        let num = parseInt(document.getElementById("n1").value);
+        let converted = (num * 9) / 5 + K;
+        document.getElementById(
+          "result"
+        ).innerHTML = `${num} grados Celsius son ${converted} grados Farenheit.`;
+      }
+    </script>
+  </body>
+</html>
+
+Crea un programa on l’usuari/ària introdueixi una temperatura en °C i es mostri
+per pantalla la conversió en ° Fahrenheit. K = 32; Fórmula (0 °C × 9 / 5) + K =
+32 °F

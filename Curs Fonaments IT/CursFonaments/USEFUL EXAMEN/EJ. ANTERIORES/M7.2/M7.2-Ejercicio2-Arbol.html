@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <input type="number" id="size" placeholder="Indica el tamaño" />
+  <input type="button" value="Dibuja" onclick="show()" />
+  <p id="mostrar"></p>
+  <body>
+    <script>
+      function show() {
+        let tabla = figura();
+        document.getElementById("mostrar").innerHTML = tabla;
+      }
+
+      function figura() {
+        let word = "*";
+        let size = parseInt(document.getElementById("size").value);
+
+        let tabla = "";
+        for (let i = 0; i < size; i++) {
+          for (let j = 0; j <= i; j++) {
+            tabla += word;
+          }
+          tabla += "<br>";
+        }
+        return tabla;
+      }
+    </script>
+  </body>
+</html>

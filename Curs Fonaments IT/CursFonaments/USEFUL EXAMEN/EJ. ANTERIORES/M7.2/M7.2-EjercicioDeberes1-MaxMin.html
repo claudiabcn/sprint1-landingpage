@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="number"
+      id="nombreNotes"
+      placeholder="introdueix el nombre de notes a analitzar"
+    />
+    <input type="button" value="Acceptar" onclick="main()" />
+    <p id="mostrar"></p>
+    <script>
+      function main() {
+        let numeroDeNotes = parseFloat(
+          document.getElementById("nombreNotes").value
+        );
+        const notes = recollirNotes(numeroDeNotes);
+        let mitjana = calcularMitjana(notes);
+        let notaMax = calcularMax(notes);
+        let notaMin = calcularMin(notes);
+        let missatge = veureMissatge(mitjana);
+
+        document.getElementById(
+          "mostrar"
+        ).innerHTML = `${missatge}. La mitjana es ${mitjana}, la nota mínima es ${notaMin} i la nota màxima és ${notaMax}.`;
+      }
+
+      function recollirNotes(numeroDeNotes) {
+        let notes = [];
+        let i = 0;
+        let nota;
+
+        do {
+          nota = parseFloat(prompt("Escriu la nota del alumne " + (i + 1)));
+          if (nota >= 0 && nota <= 10) {
+            notes.push(nota);
+            i++;
+          } else {
+            alert("Torna a introduir la nota, ha de estar entre 0 i 10.");
+          }
+        } while (i < numeroDeNotes);
+        return notes;
+      }
+
+      function calcularMitjana(notes) {
+        let suma = 0;
+        let mitjana;
+        for (let i = 0; i < notes.length; i++) {
+          suma += notes[i];
+        }
+        mitjana = suma / notes.length;
+        return mitjana;
+      }
+      function calcularMax(notes) {
+        let notaMax = notes[0];
+        for (let i = 0; i < notes.length - 1; i++) {
+          if (notes[i + 1] >= notaMax) {
+            notaMax = notes[i + 1];
+          }
+        }
+        return notaMax;
+      }
+      function calcularMin(notes) {
+        let notaMin = notes[0];
+        for (let i = 0; i < notes.length - 1; i++) {
+          if (notes[i + 1] <= notaMin) {
+            notaMin = notes[i + 1];
+          }
+        }
+        return notaMin;
+      }
+      function veureMissatge(mitjana) {
+        let missatge = "";
+        if (mitjana < 5) {
+          missatge =
+            "La nota mitjana de la classe està suspesa. Els alumnes haurien de preguntar els seus dubtes i treballar més";
+        } else if (mitjana >= 5 && mitjana < 7) {
+          missatge =
+            "La nota mitjana de la classe és bona, però els alumnes haurien de millorar el treball personal.";
+        } else {
+          missatge =
+            "Enhorabona! La nota mitjana de la classe es correspon amb l'esforç realitzat.";
+        }
+        return missatge;
+      }
+    </script>
+  </body>
+</html>
+
+Enunciat de l’exercici – Calculadora de notes de classe Crea una aplicació web
+que ajudi el professorat a analitzar les notes d’un grup d’alumnes. L’aplicació
+ha de fer el següent: L’usuari/ària introdueix mitjançant un input numèric
+quantes notes vol analitzar. Quan prem el botó "Acceptar": El programa demanarà
+per pantalla, una a una, tantes notes com hagi indicat. Cada nota ha d’estar
+entre 0 i 10. Si no és vàlida, la tornarà a demanar. Un cop introduïdes totes
+les notes, el programa ha de calcular: La nota mitjana. La nota màxima. La nota
+mínima. A continuació, ha de mostrar un missatge resum amb aquests valors i una
+valoració pedagògica en funció de la mitjana obtinguda: Si la mitjana és
+inferior a 5: "La nota mitjana de la classe està suspesa. Els alumnes haurien de
+preguntar els seus dubtes i treballar més." Si la mitjana és entre 5 i 6.99: "La
+nota mitjana de la classe és bona, però els alumnes haurien de millorar el
+treball personal." Si la mitjana és igual o superior a 7: "Enhorabona! La nota
+mitjana de la classe es correspon amb l'esforç realitzat."

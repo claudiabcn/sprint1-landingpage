@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <input type="text" id="letra" placeholder="Indica el signo" />
+  <input type="number" id="size" placeholder="Indica el tamaño" />
+  <input type="button" value="Dibuja" onclick="figura()" />
+  <p id="resultado"></p>
+  <body>
+    <script>
+      function figura() {
+        let word = document.getElementById("letra").value;
+        let si = parseInt(document.getElementById("size").value);
+        let resultado = document.getElementById("resultado");
+        let tabla = "";
+        for (let i = 0; i < si; i++) {
+          for (let j = 0; j < si; j++) {
+            tabla += word;
+          }
+          tabla += "<br>";
+        }
+        resultado.innerHTML = tabla;
+      }
+    </script>
+  </body>
+</html>

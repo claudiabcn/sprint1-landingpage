@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Personajes - Videojuego Online</title>
+  </head>
+  <body>
+    <h1>Sistema de Gestión de Personajes</h1>
+
+    <section>
+      <h2>Crear Nuevo Personaje</h2>
+      <form id="formPersonaje">
+        <label>
+          Nombre:
+          <input type="text" id="nombrePersonaje" required />
+        </label>
+        <br /><br />
+        <label>
+          Clase:
+          <select id="clasePersonaje">
+            <option value="guerrero">Guerrero</option>
+            <option value="mago">Mago</option>
+            <option value="arquero">Arquero</option>
+          </select>
+        </label>
+        <br /><br />
+        <button type="submit">Crear Personaje</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Personajes Creados</h2>
+      <div id="listaPersonajes"></div>
+    </section>
+
+    <section>
+      <h2>Gestión de Personaje</h2>
+      <select id="selectorPersonaje">
+        <option value="">Selecciona un personaje</option>
+      </select>
+
+      <div id="detallePersonaje">
+        <h3>Información del Personaje</h3>
+        <div id="infoPersonaje"></div>
+
+        <h4>Subir de Nivel</h4>
+        <button onclick="subirNivel()">Subir Nivel</button>
+
+        <h4>Aprender Habilidad</h4>
+        <select id="habilidadDisponible">
+          <option value="">Selecciona una habilidad</option>
+        </select>
+        <button onclick="aprenderHabilidad()">Aprender</button>
+
+        <h4>Olvidar Habilidad</h4>
+        <select id="habilidadAprendida">
+          <option value="">Selecciona una habilidad</option>
+        </select>
+        <button onclick="olvidarHabilidad()">Olvidar</button>
+
+        <h4>Equipar Objeto</h4>
+        <select id="objetoDisponible">
+          <option value="">Selecciona un objeto</option>
+        </select>
+        <button onclick="equiparObjeto()">Equipar</button>
+
+        <h4>Objetos Equipados</h4>
+        <div id="objetosEquipados"></div>
+      </div>
+    </section>
+
+    <script src="habilidad-class.js"></script>
+    <script src="objeto-class.js"></script>
+    <script src="personaje-class.js"></script>
+    <script src="guerrero-class.js"></script>
+    <script src="mago-class.js"></script>
+    <script src="arquero-class.js"></script>
+    <script src="main-js.js"></script>
+  </body>
+</html>

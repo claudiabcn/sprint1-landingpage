@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Gestió de Edificis</h1>
+
+    <!-- Camps comuns per a tots els tipus d'edificis -->
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" placeholder="Nom" />
+    <label for="plantes">Plantes:</label>
+    <input type="number" id="plantes" placeholder="Plantes" />
+    <label for="superficie">Superficie:</label>
+    <input type="number" id="superficie" placeholder="Superficie" />
+    <br />
+    <br />
+
+    <!-- Selector del tipus d'edifici (hospital, hotel o cinema) -->
+    <label for="tipus">Tipus:</label>
+    <select id="tipus">
+      <option value="hospital">Hospital</option>
+      <option value="hotel">Hotel</option>
+      <option value="cinema">Cinema</option>
+    </select>
+
+    <!-- Camps específics segons el tipus d'edifici seleccionat -->
+    <!-- habitacions: per hotels, malalts: per hospitals, aforament: per cinemes -->
+    <input type="number" id="habitacions" placeholder="Habitacions" />
+    <input type="number" id="malalts" placeholder="Malalts" />
+    <input type="number" id="aforament" placeholder="Aforament" />
+    <br />
+    <br />
+
+    <!-- Botons per gestionar els edificis -->
+    <button onclick="crearEdifici()">Crear Edifici</button>
+    <button onclick="eliminarEdifici()">Eliminar Edifici</button>
+    <button onclick="mostrarEdifici()">Mostrar Edifici</button>
+
+    <!-- Paràgraf per mostrar informació dels edificis -->
+    <p id="mostrar"></p>
+
+    <!-- Scripts JavaScript per a la funcionalitat d'edificis -->
+    <script src="ClasesEdificis.js"></script>
+    <script src="Funcions-edificisSINTIPUSMAP.js"></script>
+  </body>
+</html>

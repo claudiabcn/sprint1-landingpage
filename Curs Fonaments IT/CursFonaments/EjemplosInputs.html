@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      label {
+         display: inline-block;
+         width: 12em;
+         text-align: right;
+      }
+
+      span {
+         margin-left: 3em;
+         color: blue;
+      }
+
+      fieldset {
+         display: inline-block;
+      }
+
+      input,
+      select {
+         font-family: 'Open Sans', sans-serif;
+         color: darkred;
+         width: 25em;
+      }
+
+      input[type=radio],
+      input[type=checkbox],
+      input[type=color] {
+         width: 2em;
+      }
+
+      input[type=button] {
+         width: 5em;
+      }
+   </style>
+   <title>Recoger valores de INPUTS</title>
+</head>
+
+<body>
+   <h1>Tipos de entrada de datos en HTML</h1>
+   <p>
+      Selecciona el valor de cada elemento y haz clic sobre el botón
+      <input type="button" value=" mostrar " onclick="mostrar()" />
+   </p>
+   <div id="1">
+      <h2>Etiquetas que textos y números</h2>
+      <p><label for="texto">Escribe texto: </label><input id="texto" type="text" value="texto">
+         <span id="vTexto"></span>
+      </p>
+      <p><label for="numero">Escribe numero: </label><input id="numero" type="number" value="2">
+         <span id="vNumero"></span>
+      </p>
+      <p><label for="password">Escribe contraseña: </label>
+         <input id="password" type="password" value="pwd">
+         <span id="vPassword"></span>
+      </p>
+      <p><label for="mail">Escribe e-mail: </label>
+         <input id="mail" type="email" value="pruebas@gmail.com">
+         <span id="vMail"></span>
+      </p>
+      <p><label for="rango">Selecciona: </label>
+         <input id="rango" type="range" min="10" max="100" step="10" list="marcas" value="80">
+         <datalist id="marcas">
+            <option value="10">
+            <option value="20">
+            <option value="30">
+            <option value="40">
+            <option value="50">
+            <option value="60">
+            <option value="70">
+            <option value="80">
+            <option value="90">
+            <option value="100">
+         </datalist>
+         <span id="vRango"></span>
+      </p>
+      <p><label for="tlf">Escribe telefono: </label>
+         <input id="tlf" type="tel" value="930000000">
+         <span id="vTlf"></span>
+      </p>
+      <p><label for="enlace">Escribe url: </label>
+         <input id="enlace" type="url" value="https://itacademy.barcelonactiva.cat/login/index.php">
+         <span id="vEnlace"></span>
+      </p>
+      <p><label for="buscar">Texto a buscar: </label>
+         <input id="buscar" type="search" value="IT Academy">
+         <span id="vBuscar"></span>
+      </p>
+      <p><label for="archivo">Selecciona archivo: </label>
+         <input id="archivo" type="file">
+         <span id="vArchivo"></span>
+      </p>
+      <p><label for="color">Selecciona color: </label>
+         <input id="color" type="color" value="#36a8bf">
+         <span id="vColor"></span>
+      </p>
+      <p>
+         <input id="texto2" type="hidden" value="escondido">
+         <span id="vEscondido"></span>
+      </p>
+   </div>
+   <div id="2">
+      <h2>Seleccion de opciones</h2>
+      <p><label for="opciones">Selecciona la opción: </label>
+         <input name="opciones" value="1" id="opcion1" type="radio"> Opcion 1
+         <input name="opciones" value="2" id="opcion2" type="radio"> Opcion 2
+         <input name="opciones" value="3" id="opcion3" type="radio" checked> Opcion 3
+         <span id="vOpciones"></span>
+      </p>
+      <p><label for="checa">Verifica:</label>
+         <input id="checa" type="checkbox" checked>
+         <span id="vCheca"></span>
+      </p>
+      <p><label for="seleccion">Selecciona (select): </label>
+         <select id="seleccion">
+            <optgroup label="FrontEnd">
+               <option>HTML</option>
+               <option>CSS</option>
+               <option selected>JavaScript</option>
+            </optgroup>
+            <optgroup label="BackEnd">
+               <option>Java</option>
+               <option>Python</option>
+               <option>PHP</option>
+            </optgroup>
+            <optgroup label="Bases de Datos" disabled>
+               <option>MySQL</option>
+               <option>Mongo DB</option>
+               <option>PostGresql</option>
+            </optgroup>
+         </select>
+         <span id="vSeleccion"></span>
+      </p>
+      <p><label for="DataList">Selecciona (datalist): </label>
+         <input id="DataList" type="text" list="listaOpciones">
+         <datalist id="listaOpciones">
+            <option value="MySQL">
+            <option value="Mongo DB">
+            <option value="PostGresql">
+         </datalist>
+         <span id="vDataList"></span>
+      </p>
+      <p><em>La diferencia entre <b>select</b> y <b>datalist</b> es que este último sólo sugiere los valores.</em></p>
+   </div>
+   <div id="3">
+      <h2>Etiquetas para tiempo</h2>
+      <p><label for="fecha">Selecciona fecha:</label>
+         <input id="fecha" type="date" value="2022-05-10">
+         <span id="vFecha"></span>
+      </p>
+      <p><label for="fechaLocal">Selecciona fecha y hora:</label>
+         <input id="fechaLocal" type="datetime-local" value="2022-05-26T19:30">
+         <span id="vFechaLocal"></span>
+      </p>
+      <p><label for="hora">Selecciona hora:</label>
+         <input id="hora" type="time" value="19:30">
+         <span id="vHora"></span>
+      </p>
+      <p><label for="mes">Selecciona mes:</label>
+         <input id="mes" type="month" value="2022-05">
+         <span id="vMes"></span>
+      </p>
+      <p><label for="semana">Selecciona semana:</label>
+         <input id="semana" type="week" value="2022-W05">
+         <span id="vSemana"></span>
+      </p>
+   </div>
+   <div id="4">
+      <h2>Textarea</h2>
+      <p><label for="textArea">Escribe algo:</label>
+         <textarea id="textArea" rows="10" cols="50">contenido</textarea>
+         <span id="vtextArea"></span>
+      </p>
+   </div>
+   <p>Otro tipo de botón (con capacidad para gráficos)</p>
+   <p><button onclick="alert('Bienvenido')">
+         <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" />
+      </button>
+   </p>
+   <script>
+      function mostrar() {
+         //Etiquetas a las cuales se les lee el valor
+         document.getElementById("vTexto").innerHTML = document.getElementById("texto").value;
+         document.getElementById("vNumero").innerHTML = document.getElementById("numero").value;
+         document.getElementById("vPassword").innerHTML = document.getElementById("password").value;
+         document.getElementById("vMail").innerHTML = document.getElementById("mail").value;
+         document.getElementById("vRango").innerHTML = document.getElementById("rango").value;
+         document.getElementById("vTlf").innerHTML = document.getElementById("tlf").value;
+         document.getElementById("vEnlace").innerHTML = document.getElementById("enlace").value;
+         document.getElementById("vBuscar").innerHTML = document.getElementById("buscar").value;
+         document.getElementById("vArchivo").innerHTML = document.getElementById("archivo").value;
+         document.getElementById("vColor").innerHTML = document.getElementById("color").value;
+
+         document.getElementById("vFecha").innerHTML = document.getElementById("fecha").value;
+         document.getElementById("vFechaLocal").innerHTML = document.getElementById("fechaLocal").value;
+         document.getElementById("vHora").innerHTML = document.getElementById("hora").value;
+         document.getElementById("vMes").innerHTML = document.getElementById("mes").value;
+         document.getElementById("vSemana").innerHTML = document.getElementById("semana").value;
+         document.getElementById("vtextArea").innerHTML = document.getElementById("textArea").value;
+         
+         document.getElementById("vSeleccion").innerHTML = document.getElementById("seleccion").value;
+         document.getElementById("vDataList").innerHTML = document.getElementById("DataList").value;
+
+         //Checkbox. Si está checada devuelve true, si no, devuelve false 
+         document.getElementById("vCheca").innerHTML = document.getElementById("checa").checked;
+
+         //En el caso de las opciones hay que leer el pseudo elemento checked de entre todas
+         document.getElementById("vOpciones").innerHTML = document.querySelector("input[name='opciones']:checked").value;
+
+      }
+   </script>
+
+
+
+</body>
+
+</html>

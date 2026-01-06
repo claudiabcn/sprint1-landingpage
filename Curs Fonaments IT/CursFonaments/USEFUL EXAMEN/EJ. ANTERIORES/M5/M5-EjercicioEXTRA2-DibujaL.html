@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <input type="button" value="Dibujar L" onclick="laL()" />
+  <input type="number" id="n1" />
+  <p id="result"></p>
+  <body>
+    <script>
+      function laL() {
+        let size = parseInt(document.getElementById("n1").value);
+        let height = size / 2 + 1;
+        let result = document.getElementById("result");
+        let tabla = "";
+
+        for (let i = 0; i < height; i++) {
+          tabla += "*" + "<br>";
+        }
+
+        for (let i = 0; i < height - 1; i++) {
+          tabla += "*";
+        }
+
+        result.innerHTML = tabla;
+      }
+    </script>
+  </body>
+</html>
+
+Realitza un programa que pinti la lletra L per pantalla feta amb asteriscs. El
+programa demanarà l'altura. El pal horitzontal de la L tindrà una longitud de la
+meitat (divisió entera entre 2) de l'altura més un.

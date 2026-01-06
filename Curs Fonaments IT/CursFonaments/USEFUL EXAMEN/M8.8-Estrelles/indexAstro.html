@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  <h1>Sistema de gestió de la agencia espacial</h1>
+    <!-- Paràgraf per mostrar la informació de les persones creades -->
+    <p id="mostrar"></p>
+    
+    <section>
+    <!-- Selector per triar el tipus de persona (astronauta o científic) -->
+    <label for="tipus">Tipus:</label>
+    <select id="tipus">
+    <option value="">-- Selecciona --</option>
+    <option value="astronauta">Astronauta</option>
+    <option value="cientific">Científic</option>
+    </select>
+
+<!-- Camps del formulari per introduir les dades de la persona -->
+<label>DNI: <input type="text" id="dni" placeholder="DNI" /></label>
+<br> <br>
+<label>Nom: <input type="text" id="nom" placeholder="Nom" /></label>
+<label>Edat: <input type="number" id="edat" placeholder="Edat" /></label>
+  <label>Pes: <input type="number" id="pes" placeholder="Pes" /></label>  
+  <label>Especialitat: <input type="text" id="especialitat" placeholder="Especialitat" /></label>   
+      <br /><br />
+      
+      <!-- Botons per gestionar les persones -->
+      <button type="button" onclick="crearPersona()">Crear Persona</button>
+      <button type="button" onclick="mostrarPersona()">
+        Mostrar Persona
+      </button>
+      <button type="button" onclick="mostrarPersonesCreades()">
+        Mostrar-les totes
+      </button>
+
+      
+      <!-- Secció específica per gestionar astronautes -->
+      <h3>Sistema de gestió dels astronautes</h3>
+      <label>DNI astronauta: <input type="text" id="dniAst" placeholder="DNI del astronauta" /></label>
+      <br><br>
+      
+      <!-- Selector de capacitats per als astronautes -->
+      <label for="capacitat">Capacitats:</label>
+      <select id="capacitat">
+        <option value="">-- Selecciona --</option>
+        <option value="Matematiques">Matemàtiques</option>
+        <option value="Robotiques">Robòtiques</option>
+        <option value="Culinaries">Culinaries</option>
+        <option value="Bricolatge">Bricolatge</option>
+      </select>
+      <button type="button" onclick="aprendreCapacitats()">
+        Aprendre capacitat
+      </button>
+      <button type="button" onclick="oblidarCapacitats()">
+        Oblidar capacitat
+      </button>
+      <br/><br>
+      
+      <!-- Selector de missions per assignar als astronautes -->
+      <label for="missio">Missió:</label>
+        <select id="missio">
+        <option value="">-- Selecciona --</option>
+<option value="1">Apolo 13 (ID: 1)</option>
+<option value="2">Apolo 14 (ID: 2)</option>
+<option value="3">Apolo 15 (ID: 3)</option>
+<option value="4">Apolo 16 (ID: 4)</option>
+      </select>
+        <button type="button" onclick="assignarMissio()">
+        Assignar Missió
+      </button><br />
+      
+      <!-- Secció específica per gestionar científics -->
+      <h3>Sistema de gestió dels científics</h3>
+      <label>DNI científic: <input type="text" id="dniCie" placeholder="DNI del científic" /></label> <br> <br>
+          <label for="investigacio">Investigació:</label>
+      <select id="investigacio">
+        <option value="">-- Selecciona --</option>
+        <option value="0">Estudi de la lluna - Astrologia</option>
+        <option value="1">Exploració de Mart - Geologia</option>
+        <option value="2">Estudi de les estrelles - Astronomia</option>
+      </select>
+      <button type="button" onclick="assignarInvestigacio()">Assignar una investigació</button>
+
+    <!-- Scripts JavaScript per a la funcionalitat -->
+    <script src="classes_astro_inheritance.js"></script>
+    <script src="classes_astro_other.js"></script>
+    <script src="functions_astro.js"></script>
+  </body>
+</html>

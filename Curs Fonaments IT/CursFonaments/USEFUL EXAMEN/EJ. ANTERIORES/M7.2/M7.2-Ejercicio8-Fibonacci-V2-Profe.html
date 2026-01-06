@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Fibonacci" onclick="miFuncion()" />
+    <p id="show"></p>
+
+    <script>
+      function miFuncion() {
+        let numero;
+        do {
+          do {
+            numero = parseInt(prompt("Escoge un número: "));
+          } while (isNaN(numero));
+        } while (!fibonacci(numero));
+
+        alert("Exacto " + numero + " pertenece a la sucesión de Fibonacci");
+      }
+
+      function fibonacci(num) {
+        let i = 2;
+        const array = [0, 1];
+
+        if (num === 0 || num === 1) {
+          return true;
+        } else {
+          while (array[i - 1] < num) {
+            array.push(array[i - 1] + array[i - 2]);
+            if (num === array[i]) {
+              return true;
+            }
+            i++;
+          }
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

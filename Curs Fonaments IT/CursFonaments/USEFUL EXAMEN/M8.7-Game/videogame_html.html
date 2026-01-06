@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Personajes - Videojuego Online</title>
+  </head>
+  <body>
+    <h1>Sistema de Gestión de Personajes</h1>
+    <!-- Paràgraf per mostrar informació dels personatges -->
+    <p id="mostrar"></p>
+
+    <section>
+      <!-- Camp per introduir el nom del personatge -->
+      <label>
+        Nombre:
+        <input type="text" id="nombre" placeholder="Nombre del personaje" />
+      </label>
+      <br /><br />
+
+      <!-- Selector per triar la classe del personatge (mago o guerrero) -->
+      <label for="clase">Clase:</label>
+      <select id="clase">
+        <option value="">-- Selecciona --</option>
+        <option value="mago">Mago</option>
+        <option value="guerrero">Guerrero</option>
+      </select>
+      <br /><br />
+
+      <!-- Botons per gestionar els personatges -->
+      <button type="button" onclick="crearPersonaje()">Crear Personaje</button>
+      <button type="button" onclick="mostrarPersonaje()">
+        Mostrar personaje
+      </button>
+      <button type="button" onclick="mostrarPersonajesCreados()">
+        Mostrarlos todos
+      </button>
+      <button type="button" onclick="subirNivel()">Subir de nivel</button>
+
+      <!-- Paràgraf per mostrar la llista de personatges creats -->
+      <p id="mostrarPersonajesCreados"></p>
+
+      <br /><br />
+
+      <!-- Selector d'habilitats que poden aprendre els personatges -->
+      <label for="habilidad">Habilidades:</label>
+      <select id="habilidad">
+        <option value="">-- Selecciona --</option>
+        <option value="Ataque">Ataque</option>
+        <option value="Defensa">Defensa</option>
+        <option value="Curación">Curación</option>
+        <option value="Fuego">Fuego</option>
+      </select>
+      <button type="button" onclick="aprenderHabilidades()">
+        Aprender Habilidad
+      </button>
+      <button type="button" onclick="olvidarHabilidades()">
+        Olvidar Habilidad
+      </button>
+      <br /><br />
+
+      <!-- Selector d'objectes que es poden equipar als personatges -->
+      <label for="objetoEquipado">Objetos a equipar:</label>
+      <select id="objetoEquipado">
+        <option value="">-- Selecciona --</option>
+        <option value="Poción de Vida">Poción de Vida</option>
+        <option value="Poción de Maná">Poción de Maná</option>
+        <option value="Anillo de Protección">Anillo de Protección</option>
+        <option value="Botas de Velocidad">Botas de Velocidad</option>
+        <option value="Espada de Hierro">Espada de Hierro</option>
+        <option value="Espada de Acero">Espada de Acero</option>
+        <option value="Túnica Mística">Túnica Mística</option>
+        <option value="Orbe de Poder">Orbe de Poder</option>
+      </select>
+      <button type="button" onclick="equiparObjetos()">Equipar Objeto</button>
+    </section>
+
+    <!-- Scripts JavaScript organitzats per funcionalitat del videojoc -->
+    <script src="habilidad_class.js"></script>
+    <script src="objeto_class.js"></script>
+    <script src="personaje_class.js"></script>
+    <script src="guerrero_class.js"></script>
+    <script src="mago_class.js"></script>
+    <script src="main_js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="n1" />
+    <input type="button" value="Tabla de multiplicar" onclick="multiplica()" />
+    <p id="resultado"></p>
+    <script>
+      function multiplica() {
+        let n1 = parseInt(document.getElementById("n1").value);
+        let resultado = document.getElementById("resultado");
+        let tabla = `La tabla del ${n1} es: <br>`;
+
+        for (let i = 0; i <= 10; i++) {
+          tabla += `${n1} X ${i} = ${n1 * i}<br>`;
+        }
+        resultado.innerHTML = tabla;
+      }
+    </script>
+  </body>
+</html>

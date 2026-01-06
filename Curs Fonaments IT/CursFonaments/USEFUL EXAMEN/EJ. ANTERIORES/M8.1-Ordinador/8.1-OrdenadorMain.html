@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="marca" placeholder="Marca" />
+    <input type="text" id="modelo" placeholder="Modelo" />
+    <input type="text" id="procesador" placeholder="Procesador" />
+    <input type="number" id="ram" placeholder="Ram" />
+    <input type="number" id="discoduro" placeholder="Disco duro" />
+
+    <input type="button" value="Registrar ordinador" onclick="main()" />
+
+    <p id="mostrar"></p>
+
+    <script>
+      function main() {
+        let marca = document.getElementById("marca").value;
+        let modelo = document.getElementById("modelo").value;
+        let procesador = document.getElementById("procesador").value;
+        let ram = parseInt(document.getElementById("ram").value);
+        let discoDuro = parseInt(document.getElementById("discoduro").value);
+
+        const ordenador = new Ordenador(
+          marca,
+          modelo,
+          procesador,
+          ram,
+          discoDuro
+        );
+
+        document.getElementById("mostrar").innerHTML =
+          ordenador.toString() +
+          "<br>" +
+          ordenador.executar("Visual Studio Code");
+      }
+    </script>
+    <script src="8.1-Ordenador.js"></script>
+  </body>
+</html>

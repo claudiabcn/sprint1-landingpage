@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  <h1>Sistema de Gestió d'Escola d'Arts Marcials</h1>
+    <!-- Paràgraf per mostrar la informació de les persones -->
+    <p id="mostrar"></p>
+    
+    <section>
+    <!-- Selector per triar el tipus de persona (instructor o estudiant) -->
+    <label for="tipus">Tipus:</label>
+    <select id="tipus">
+    <option value="">-- Selecciona --</option>
+    <option value="instructor">Instructor</option>
+    <option value="estudiant">Estudiant</option>
+    </select>
+
+<!-- Camps del formulari per introduir les dades de la persona -->
+<label>DNI: <input type="text" id="dni" placeholder="DNI de la persona" /></label>
+<br> <br>
+<label>Nom: <input type="text" id="nom" placeholder="Nom de la persona" /></label>
+<label>Edat: <input type="number" id="edat" placeholder="Edat" /></label>
+  <label>Experiència: <input type="number" id="experiencia" placeholder="Anys de experiència" /></label>  
+  <label>Estilo Art Marcial: <input type="text" id="estiloArteMarcial" placeholder="Karate, Judo, etc." /></label>   
+  <label>Nivell: <input type="text" id="nivell" placeholder="principiante, intermedio, avanzado" /></label>   
+      <br /><br />
+      
+      <!-- Botons per gestionar les persones -->
+      <button type="button" onclick="crearPersona()">Crear Persona</button>
+      <button type="button" onclick="mostrarPersona()">
+        Mostrar Persona
+      </button>
+      <button type="button" onclick="mostrarPersonesCreades()">
+        Mostrar-les totes
+      </button>
+  
+      <!-- Paràgraf addicional per mostrar la llista de persones creades -->
+      <p id="mostrarPersonesCreades"></p>
+      
+      <!-- Secció específica per gestionar instructors -->
+      <h3>Sistema de gestió dels instructors</h3>
+      <label>DNI instructor: <input type="text" id="dniIns" placeholder="DNI de l'instructor" /></label>
+      <br><br>
+      
+      <!-- Selector de tècniques per als instructors -->
+      <label for="tecnica">Tècniques:</label>
+      <select id="tecnica">
+        <option value="">-- Selecciona --</option>
+        <option value="Puny directe">Puny directe</option>
+        <option value="Patada alta">Patada alta</option>
+        <option value="Bloqueig">Bloqueig</option>
+        <option value="Projecció">Projecció</option>
+        <option value="Immobilització">Immobilització</option>
+      </select>
+      <button type="button" onclick="aprendreTecniques()">
+        Aprendre tècnica
+      </button>
+      <button type="button" onclick="oblidarTecniques()">
+        Oblidar tècnica
+      </button>
+      <br/><br>
+      
+      <!-- Secció específica per gestionar estudiants -->
+      <h3>Sistema de gestió dels estudiants</h3>
+      <label>DNI Estudiant: <input type="text" id="dniEst" placeholder="DNI del estudiant" /></label> <br> <br>
+      <label>Torneig: <input type="text" id="torneig" placeholder="Torneig" /></label>
+      <label>Tasca: <input type="text" id="tasca" placeholder="Tasca" /></label>
+      <label>Tècnica: <input type="text" id="tecnicaEst" placeholder="Tècnica" /></label>
+      <button type="button" onclick="assignarTecnica()">Assignar una tècnica</button>
+      <button type="button" onclick="assignarTorneig()">Assigna un torneig</button>
+      <br /><br />
+
+    <!-- Scripts JavaScript per a la funcionalitat de la clínica veterinària -->
+    <script src="classes_martial_inheritance.js"></script>
+    <script src="classes_martial_other.js"></script>
+    <script src="functions_martial.js"></script>
+  </body>
+</html>

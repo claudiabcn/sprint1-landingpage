@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="word" />
+    <input type="button" value="Valida mayúsculas" onclick="mayusValidar()" />
+    <p id="mostrar"></p>
+    <script>
+      function mayusValidar() {
+        let palabrita = document.getElementById("word").value;
+
+        let upper = palabrita.toUpperCase();
+        let lower = palabrita.toLowerCase();
+
+        if (palabrita === upper) {
+          document.getElementById("mostrar").innerHTML = "Está en mayúsculas";
+        } else if (palabrita === lower) {
+          document.getElementById("mostrar").innerHTML = "Está en minúsculas";
+        } else {
+          document.getElementById("mostrar").innerHTML =
+            "Está en minúsculas y mayúsculas";
+        }
+      }
+    </script>
+  </body>
+</html>

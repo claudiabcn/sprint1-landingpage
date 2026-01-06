@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="word" placeholder="Introduce una palabra" />
+    <input type="button" value="Al revés" onclick="textoReves()" />
+    <p id="show"></p>
+
+    <script>
+      function textoReves() {
+        let palabrita = document.getElementById("word").value;
+        let palabritaReves = "";
+        for (let i = 0; i < palabrita.length; i++) {
+          palabritaReves = palabrita[i] + palabritaReves;
+        }
+        document.getElementById("show").innerHTML = palabritaReves;
+      }
+    </script>
+  </body>
+</html>
+
+En aquest programa l’usuari/ària ha d’introduir un string i, utilitzant un bucle
+for, el programa ha de mostrar l’string al revés.

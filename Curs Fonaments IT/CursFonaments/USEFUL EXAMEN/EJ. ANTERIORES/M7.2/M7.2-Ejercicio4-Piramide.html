@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <input type="number" id="size" placeholder="Indica el tamaño" />
+  <input type="button" value="Dibuja" onclick="figura()" />
+  <p id="resultado"></p>
+  <body>
+    <script>
+      function figura() {
+        let word = "*";
+        let size = parseInt(document.getElementById("size").value);
+        let tabla = "";
+        for (let i = 0; i <= size; i++) {
+          for (let j = 0; j <= i; j++) {
+            tabla += word;
+          }
+          tabla += "<br>";
+        }
+
+        for (let i = 0; i < size; i++) {
+          for (let j = 0; j < size - i; j++) {
+            tabla += word;
+          }
+          tabla += "<br>";
+        }
+
+        document.getElementById("resultado").innerHTML = tabla;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="s"></p>
+    <input
+      type="button"
+      value="Introduir el nombre d'alumnes"
+      onclick="main()"
+    />
+
+    <script>
+      function main() {
+        let numeroAlumnes = parseInt(prompt("Introdueix el nombre d'alumnes"));
+        const notes = recollirNotes(numeroAlumnes);
+        let mitjana = calcularMitjana(notes);
+        let missatge = veureMissatge(mitjana);
+        document.getElementById("s").innerHTML = missatge;
+      }
+      function recollirNotes(numeroAlumnes) {
+        let i = 0;
+        let nota;
+        let notes = [];
+        while (i < numeroAlumnes) {
+          let nota = parseInt(prompt("Introdueix la nota " + (i + 1)));
+          if (nota >= 0 && nota <= 10) {
+            notes.push(nota);
+            i++;
+          } else {
+            alert("Les notes han de valer entre 0 i 10.");
+          }
+        }
+
+        return notes;
+      }
+
+      function calcularMitjana(notes) {
+        let total = 0;
+        for (let i = 0; i < notes.length; i++) {
+          total = notes[i] + total;
+        }
+
+        return total / notes.length;
+      }
+      function veureMissatge(mitjana) {
+        let missatge;
+        if (mitjana < 5) {
+          missatge =
+            "La nota mitjana de la classe està suspesa. Els/les alumnes haurien de preguntar els seus dubtes i treballar més.";
+        } else if (mitjana >= 5 && mitjana < 7) {
+          missatge =
+            "La nota mitjana de la classe és bona, però els/les alumnes haurien de millorar el treball personal.";
+        } else {
+          missatge =
+            "Enhorabona! La nota mitjana de la classe es correspon amb l'esforç realitzat.";
+        }
+        return missatge;
+      }
+    </script>
+  </body>
+</html>
+
+Un/a professor/a vol calcular les mitges de les notes de tota la classe. Crea
+una aplicació on l'usuari/ària introduirà un número per pantalla (el número
+correspon al nombre de notes que vol introduir) i el programa li demanarà que
+introdueixi les notes de tots els/les alumnes. Un cop les notes han sigut
+introduïdes, el programa retorna el següent: Si la nota mitjana és menor que 5:
+"La nota mitjana de la classe està suspesa. Els/les alumnes haurien de preguntar
+els seus dubtes i treballar més". Si la nota és inferior a 7: "La nota mitjana
+de la classe és bona, però els/les alumnes haurien de millorar el treball
+personal". Per la resta de casos, el missatge ha de ser: "Enhorabona! La nota
+mitjana de la classe es correspon amb l'esforç realitzat".

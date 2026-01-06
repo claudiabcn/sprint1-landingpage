@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      value="Validar coincidencias de hastags"
+      onclick="show()"
+    />
+    <p id="mostrar"></p>
+    <script>
+      function show() {
+        const arrayhash1 = [
+          "#work",
+          "#paradise",
+          "#beach",
+          "#working",
+          "#sun",
+          "#barcelona",
+          "#menorca",
+          "#developer",
+          "#athome",
+          "#barcelona",
+          "#natural",
+          "#natura",
+        ];
+        const arrayhash2 = [
+          "#paradise",
+          "#sun",
+          "#cocktail",
+          "#barcelona",
+          "#athome",
+          "#natura",
+          "#barcelona",
+          "#llimonada",
+        ];
+
+        let resultado = arrays(arrayhash1, arrayhash2);
+        document.getElementById("mostrar").innerHTML = resultado;
+      }
+
+      function arrays(arrayhash1, arrayhash2) {
+        const arrayhashcommon = [];
+        for (let i = 0; i < arrayhash1.length; i++) {
+          for (let j = 0; j < arrayhash2.length; j++) {
+            if (arrayhash1[i] === arrayhash2[j]) {
+              arrayhashcommon.push(arrayhash1[i]);
+              i++;
+            }
+          }
+        }
+        return "Las coincidencias que hay son: " + arrayhashcommon;
+      }
+    </script>
+  </body>
+</html>
+
+Ens donen dos arrays. En un hi ha hashtags d’una publicació en una xarxa social
+i en l'altre hashtags que volem saber si estan a la publicació. Hashtags
+publicats: "#work", "#paradise", "#beach", "#working", "#sun", "#barcelona",
+"#menorca", "#developer", "#athome", "#natural", "#natura" Hashtags a comprobar:
+"#paradise", "#sun", "#cocktail", "#athome", "#natura", "#llimonada" Crea un
+tercer array amb els hashtags que comuns en els dos arrays.

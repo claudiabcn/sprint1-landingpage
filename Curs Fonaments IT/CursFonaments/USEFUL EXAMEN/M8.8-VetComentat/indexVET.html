@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  <h1>Sistema de Gestió de Clínica Veterinaria</h1>
+    <!-- Paràgraf per mostrar la informació dels sanitaris -->
+    <p id="mostrar"></p>
+    
+    <section>
+    <!-- Selector per triar el tipus de sanitari (veterinari o auxiliar) -->
+    <label for="tipus">Tipus:</label>
+    <select id="tipus">
+    <option value="">-- Selecciona --</option>
+    <option value="veterinari">Veterinari</option>
+    <option value="auxiliar">Auxiliar veterinari</option>
+    </select>
+
+<!-- Camps del formulari per introduir les dades del sanitari -->
+<label>DNI: <input type="text" id="dni" placeholder="DNI del sanitari" /></label>
+<br> <br>
+<label>Nom: <input type="text" id="nom" placeholder="Nom del sanitari" /></label>
+<label>Any de naixement: <input type="number" id="anyNaixement" placeholder="Any de naixement" /></label>
+  <label>Anys experiència: <input type="number" id="anysExperiencia" placeholder="Anys de experiencia" /></label>  
+  <label>Especialitat: <input type="text" id="especialitat" placeholder="Especialitat" /></label>   
+      <br /><br />
+      
+      <!-- Botons per gestionar els sanitaris -->
+      <button type="button" onclick="crearSanitari()">Crear Sanitari</button>
+      <button type="button" onclick="mostrarSanitari()">
+        Mostrar Sanitari
+      </button>
+      <button type="button" onclick="mostrarSanitarisCreats()">
+        Mostrar-los tots
+      </button>
+      <button type="button" onclick="mostrarSanitariJove()">
+        Mostrar el més jove
+      </button>
+      
+      <!-- Paràgraf addicional per mostrar la llista de sanitaris creats -->
+      <p id="mostrarSanitarisCreats"></p>
+      
+      <!-- Secció específica per gestionar veterinaris -->
+      <h3>Sistema de gestió dels veterinaris</h3>
+      <label>DNI veterinari: <input type="text" id="dniVet" placeholder="DNI del veterinari" /></label>
+      <br><br>
+      
+      <!-- Selector de capacitats per als veterinaris -->
+      <label for="capacitat">Capacitats:</label>
+      <select id="capacitat">
+        <option value="">-- Selecciona --</option>
+        <option value="Curar">Curar</option>
+        <option value="Tallar">Tallar</option>
+        <option value="Pesar">Pesar</option>
+        <option value="Mesurar">Mesurar</option>
+      </select>
+      <button type="button" onclick="aprendreCapacitats()">
+        Aprendre capacitat
+      </button>
+      <button type="button" onclick="oblidarCapacitats()">
+        Oblidar capacitat
+      </button>
+      <br/><br>
+      
+      <!-- Selector de casos clínics per assignar als veterinaris -->
+      <label for="casclin">Cas clinic:</label>
+        <select id="casclin">
+        <option value="">-- Selecciona --</option>
+<option value="1">Fractura de pota de gos (ID: 1)</option>
+<option value="2">Fractura de pota de conill (ID: 2)</option>
+<option value="3">Fractura de pota de gat (ID: 3)</option>
+<option value="4">Fractura de pota de cavall (ID: 4)</option>
+      </select>
+        <button type="button" onclick="assignarCasClinic()">
+        Assignar Cas Clinic
+      </button><br />
+      
+      <!-- Secció específica per gestionar auxiliars veterinaris -->
+      <h3>Sistema de gestió dels auxiliars veterinaris</h3>
+      <label>DNI Auxiliar veterinari: <input type="text" id="dniaux" placeholder="DNI del auxiliar" /></label> <br> <br>
+      <label>Animal: <input type="text" id="animal" placeholder="Animal" /></label>
+      <label>Tasca: <input type="text" id="tasca" placeholder="Tasca" /></label>
+      <button type="button" onclick="assignarAnimal()">Atendre un animal</button>
+      <button type="button" onclick="registrarTasca()">Registra una tasca</button>
+      
+      <!-- Secció per modificar dades personals dels veterinaris -->
+      <h3>Modificar dades personals del veterinari</h3>
+      <label for="dniMod">DNI:</label>
+      <input type="text" id="dniMod" placeholder="DNI del veterinari" />
+      
+      <!-- Selector per triar quin camp modificar -->
+      <select id="campMod">
+        <option value="nom">Nom</option>
+        <option value="especialitat">Especialitat</option>
+        <option value="anysExperiencia">Experiencia</option>
+      </select>
+      <label for="valorMod">Valor nou:</label>
+      <input type="text" id="valorMod" placeholder="Valor nou" />
+      <button onclick="modificarVeterinari()">Modificar veterinari</button>
+      <br /><br />
+
+    <!-- Scripts JavaScript per a la funcionalitat de la clínica veterinària -->
+    <script src="classes_vet_inheritance.js"></script>
+    <script src="classes_vet_other.js"></script>
+    <script src="functions_vet.js"></script>
+  </body>
+</html>

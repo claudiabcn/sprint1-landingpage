@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      value="Pon bien el array"
+      onclick="mostrarResultado()"
+    />
+    <p id="mostrar"></p>
+
+    <script>
+      function mostrarResultado() {
+        let resultado = interseccion();
+        document.getElementById("mostrar").innerHTML = resultado;
+      }
+
+      function interseccion() {
+        let ar1 = [5, 1, 2, 3, 6, 6, 4, 5];
+        let result = [];
+        let exists = false
+
+        for (let i = 0; i<ar1.length;i++){
+          for (let j=1; )
+        }
+
+      }
+    </script>
+  </body>
+</html>
+
+Crea una función que reciba un array como parámetro y devuelva un nuevo array
+con los elementos que aparecen más de una vez, sin repetirlos en el resultado.
+Crea una función que reciba un array de números como parámetro y devuelva un
+nuevo array con los números que están repetidos exactamente dos veces en el
+array original.

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="n1" />
+    <input type="button" value="Fibonacci" onclick="fibon()" />
+    <p id="show"></p>
+
+    <script>
+      function fibon() {
+        const fibArray = [0, 1];
+        let number = parseInt(document.getElementById("n1").value);
+        if (number >= 2) {
+          for (let i = 0; i < number - 2; i++) {
+            fibArray.push(fibArray[i] + fibArray[i + 1]);
+          }
+
+          document.getElementById(
+            "show"
+          ).innerHTML = `La sèrie de Fibonacci per al número ${number} és ${fibArray}.`;
+        } else {
+          document.getElementById("show").innerHTML =
+            "El número ha de ser a partir de 2.";
+        }
+      }
+    </script>
+  </body>
+</html>

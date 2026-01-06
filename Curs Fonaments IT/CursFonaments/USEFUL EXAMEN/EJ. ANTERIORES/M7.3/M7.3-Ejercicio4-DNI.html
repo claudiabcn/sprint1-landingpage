@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="dni" />
+    <input type="button" value="Valida" onclick="dniValidar()" />
+    <p id="mostrar"></p>
+    <script>
+      function dniValidar() {
+        let dniNumber = document.getElementById("dni").value;
+        let num = parseInt(dniNumber.substring(0, 8));
+        let letter = dniNumber.charAt(8).toUpperCase();
+        let resto = num % 23;
+        const chars = [
+          "T",
+          "R",
+          "W",
+          "A",
+          "G",
+          "M",
+          "Y",
+          "F",
+          "P",
+          "D",
+          "X",
+          "B",
+          "N",
+          "J",
+          "Z",
+          "S",
+          "Q",
+          "V",
+          "H",
+          "L",
+          "C",
+          "K",
+          "E",
+        ];
+
+        if (dniNumber.length !== 9 || !isNaN(letter) || isNaN(num)) {
+          alert("Has introducido mal del DNI.");
+          return;
+        }
+
+        if (chars[resto] === letter) {
+          document.getElementById("mostrar").innerHTML = "El DNI es válido.";
+        } else {
+          document.getElementById("mostrar").innerHTML =
+            "El DNI no es válido, la letra tiene que ser " + chars[resto] + ".";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Gestió de la lliga de futbol</h1>
+  
+    <section id="Personal">
+      <h2>Altes, baixes i consultes de personal</h2>
+      <h5>Per crear personal tots els camps son obligatoris, per eliminar o consultar només el nom.</h5>
+      <label for="tipus">Tipus:</label>
+    <select id="tipus">
+      <option value="">-- Selecciona --</option>
+      <option value="fisio">Fisioterapeuta</option>
+      <option value="entrenador">Entrenador</option>
+    </select>
+     <label for="equipPertinent">Equip:</label>
+      <input type="text" id="equipPertinent" placeholder="Equip" />
+    <br /><br />
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" placeholder="Nom" />
+      <label for="cognom">Cognom:</label>
+      <input type="text" id="cognom" placeholder="Cognom" />
+      <label for="edat">Edat:</label>
+      <input type="text" id="edat" placeholder="Edat" />
+      <label for="antiguitat">Antiguitat:</label>
+      <input type="text" id="antiguitat" placeholder="Antiguitat" />
+      <button onclick="crearPersonal()">Crear personal</button>
+      <button onclick="eliminarPersonal()">Eliminar personal</button>
+      <button onclick="consultarPersonal()">Consultar personal</button>
+
+        <p id="missatgePersonal"></p>
+    </section>
+
+    <section id="consultas">
+      <h2>Consultes</h2>
+      <label for="nomequip">Nom equip:</label>
+      <input type="text" id="nomequip" placeholder="Nom equip" />
+      <button onclick="consultarEquip()">Consultar equip</button>
+      <label for="nompatrocinador">Nom patrocinador:</label>
+      <input type="text" id="nompatrocinador" placeholder="Nom" />
+      <button onclick="consultarPatrocinador()">Consultar patrocinador</button>
+      <label for="nomjugador">Nom jugador:</label>
+      <input type="text" id="nomjugador" placeholder="Nom jugador" />
+      <button onclick="consultarJugador()">Consultar jugador</button>
+       <p id="missatgeConsultes"></p>
+    </section>
+         <section id="llistes"></section>
+          <h2>Llistes</h2>
+            <button onclick="llistaEquips()">Consultar llista d'equips</button>
+      <button onclick="llistaPatrocinador()">
+        Consultar llista de patrocinadors
+      </button>
+      <button onclick="llistaJugador()">Consultar llista de jugadors</button>
+       <p id="missatgeLlistes"></p>
+    </section>
+
+
+    <script src="ClasesPersonal.js"></script>
+    <script src="ClasesOtras.js"></script>
+    <script src="funcionesLiga.js"></script>
+  </body>
+</html>
+
+Una liga de fútbol quiere informatizar la gestión de sus equipos, sus plantillas
+y los patrocinios asociados. Cada Equipo pertenece a un país y cuenta con un
+presupuesto anual. Dentro de cada equipo hay varios Jugadores, cada uno
+especializado en una posición del campo y con su propio valor de mercado.
+Además, los equipos incorporan Personal (entrenadores y fisioterapeutas),
+quienes comparten características comunes (datos personales y antigüedad) pero
+calculan su salario de forma distinta: los entrenadores reciben un bonus por
+resultados y los fisioterapeutas una gratificación por antigüedad. Por otra
+parte, se incluyen Patrocinadores que pueden respaldar a uno o varios equipos,
+aportando una cantidad económica que contribuye al presupuesto de los mismos. La
+aplicación debe permitir: • Dar de alta, baja y consulta de equipos, jugadores,
+entrenadores, fisioterapeutas y patrocinadores. • Mantener la lista de equipos
+que apoya cada patrocinador. Los datos iniciales de equipos y patrocinadores
+estarán cargados directamente en el código.
